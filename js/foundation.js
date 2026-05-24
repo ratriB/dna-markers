@@ -102,6 +102,11 @@ const GENOME_BOXES = [
   {
     id: "te", parent: "dispersed", group: "leaf",
     related: [],
+    // Transposons are the basis of several real marker systems (SSAP, IRAP,
+    // REMAP, RBIP, ISBP) — outside the scope of this introductory course.
+    // Flag so the sidebar shows "not covered in this class" instead of the
+    // misleading "no markers" message used for genuinely marker-less leaves.
+    outOfScope: true,
     detail: {
       th: "Transposable elements (ยีนกระโดด) · เคลื่อนย้ายตำแหน่งได้ · เป็นแหล่งกำเนิดความหลากหลายในจีโนม",
       en: "Transposable elements (\"jumping genes\") that can change position — a major source of genomic variation."
@@ -174,8 +179,12 @@ function selectGenomeBox(id, mount) {
 
   mount.querySelectorAll(".genome-box").forEach(el => el.classList.toggle("active", el.dataset.id === id));
 
-  const related = b.related.length === 0
-    ? `<p class="genome-related-empty">${lang === "th" ? "ไม่มี marker เฉพาะที่ใช้ภูมิภาคนี้โดยตรง" : "No markers directly target this region."}</p>`
+  const related = b.outOfScope
+    ? `<p class="genome-related-empty">${lang === "th"
+        ? "ไม่กล่าวถึงในคลาสนี้ — มี marker หลายชนิดที่พัฒนาจาก transposon (เช่น <strong>SSAP, IRAP, REMAP, RBIP, ISBP</strong>) แต่อยู่นอกขอบเขตของวิชานี้"
+        : "Not covered in this class — many transposon-based markers exist (e.g., <strong>SSAP, IRAP, REMAP, RBIP, ISBP</strong>) but lie outside this course's scope."}</p>`
+    : b.related.length === 0
+    ? `<p class="genome-related-empty">${lang === "th" ? "ไม่มี marker เฉพาะที่ใช้บริเวณนี้โดยตรง" : "No markers directly target this region."}</p>`
     : (b.related[0] === "all"
         ? `<p>${lang === "th" ? "marker ทุกชนิดทำงานบนจีโนมนิวเคลียส" : "All markers operate on the nuclear genome."}</p>`
         : `<ul class="genome-related">${b.related.map(m => `<li><a href="index.html#${m.toLowerCase()}">${m}</a></li>`).join("")}</ul>`);
