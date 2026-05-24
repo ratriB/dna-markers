@@ -108,4 +108,4 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 
 อนุญาตให้ใช้งานเพื่อการศึกษา · ห้ามใช้ในเชิงพาณิชย์ · ต้องอ้างอิงผู้แต่ง
 
 หากใช้ในงานของท่าน กรุณาอ้างอิงเป็น:
-> Boonruangrod, R. (2026). *DNA Markers — Teaching Materials*. Department of Horticulture, Kasetsart University. [URL]
+> Boonruangrod, R. (2026). *DNA Markers — Teaching Materials*. Department of Horticulture, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University. [URL]
