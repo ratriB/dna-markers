@@ -21,15 +21,15 @@
                 "en": "Why does a heterozygote's HRM curve differ from both homozygote curves?" },
     "choices": [
       { "th": "เพราะ heterozygote มี DNA มากกว่า", "en": "Because heterozygotes have more DNA" },
-      { "th": "เพราะ heterozygote มีทั้ง homoduplex (AA, BB) และ heteroduplex (A/B) ในหลอด — heteroduplex มี mismatch จึงหลอมเหลวที่ Tm ต่ำกว่า",
-        "en": "Because heterozygotes contain homoduplex (AA, BB) AND heteroduplex (A/B) products — heteroduplexes carry a mismatch and melt at lower Tm" },
+      { "th": "เพราะ heterozygote มีทั้ง homoduplex (AA, aa) และ heteroduplex (Aa) ในหลอด — heteroduplex มี mismatch จึงหลอมเหลวที่ Tm ต่ำกว่า",
+        "en": "Because heterozygotes contain homoduplex (AA, aa) AND heteroduplex (Aa) products — heteroduplexes carry a mismatch and melt at lower Tm" },
       { "th": "เพราะ dye จับ heterozygote แน่นกว่า", "en": "The dye binds heterozygote DNA more tightly" },
       { "th": "เพราะ PCR ของ heterozygote มีประสิทธิภาพต่ำกว่า", "en": "Heterozygote PCR is less efficient" }
     ],
     "answer": 1,
     "explain": {
-      "th": "หลัง PCR ใน heterozygote เมื่อ DNA สาย A จับสาย B จะได้ heteroduplex ที่มี mismatch 1 ตำแหน่ง → ลด Tm ลง ~1°C — curve จึงมี 2 จุดเปลี่ยน (homoduplex + heteroduplex) ทำให้รูปร่างต่างจาก homozygote ที่มี duplex แบบเดียว",
-      "en": "After PCR, heterozygote samples form heteroduplex molecules (A strand + B strand with one mismatch) that melt ~1 °C lower than homoduplexes. The combined curve shows two inflection points — uniquely shaped, distinct from either homozygote."
+      "th": "หลัง PCR ใน heterozygote เมื่อสายจาก allele A จับกับสายจาก allele a จะได้ heteroduplex ที่มี mismatch 1 ตำแหน่ง → ลด Tm ลง ~1°C — curve จึงมี 2 จุดเปลี่ยน (homoduplex + heteroduplex) ทำให้รูปร่างต่างจาก homozygote ที่มี duplex แบบเดียว",
+      "en": "After PCR, heterozygote samples form heteroduplex molecules (a strand from allele A paired with a strand from allele a, carrying one mismatch) that melt ~1 °C lower than homoduplexes. The combined curve shows two inflection points — uniquely shaped, distinct from either homozygote."
     }
   },
   {

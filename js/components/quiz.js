@@ -1,6 +1,11 @@
 // Tiny quiz engine. Supports multiple-choice (single correct answer) with
 // optional explanations. Bilingual: question/choices/explanation are objects
 // keyed by language ({ th: "...", en: "..." }).
+//
+// Prompt, choice and explanation strings are rendered via innerHTML so they
+// can use small inline HTML for emphasis (<strong>, <em>, <small>). This
+// matches the i18n system; quiz JSON is authored content (not user input),
+// so it's safe to trust.
 
 import { getLang, onLanguageChange, t } from "../i18n.js";
 
@@ -35,7 +40,7 @@ export function renderQuiz(mount, questions) {
                     <input type="radio" name="q-${q.id}" id="${id}" value="${ci}"
                            ${isChosen ? "checked" : ""}
                            ${checked ? "disabled" : ""} />
-                    <span>${escapeHtml(c[lang])}</span>
+                    <span>${c[lang]}</span>
                   </label>`;
         })
         .join("");
@@ -44,14 +49,14 @@ export function renderQuiz(mount, questions) {
       if (checked) {
         const cls = correct ? "correct" : "wrong";
         const head = correct ? t("quiz.correct") : t("quiz.wrong");
-        const explain = q.explain ? `<div>${escapeHtml(q.explain[lang])}</div>` : "";
+        const explain = q.explain ? `<div>${q.explain[lang]}</div>` : "";
         feedback = `<div class="feedback shown ${cls}">
                       <strong>${head}</strong>${explain}
                     </div>`;
       }
 
       return `<div class="quiz-question" data-qid="${q.id}">
-                <p class="q">${idx + 1}. ${escapeHtml(q.prompt[lang])}</p>
+                <p class="q">${idx + 1}. ${q.prompt[lang]}</p>
                 <div class="choices">${choices}</div>
                 ${feedback}
               </div>`;
@@ -90,8 +95,4 @@ export function renderQuiz(mount, questions) {
   render();
   // Re-render on language change so prompts/feedback update.
   onLanguageChange(render);
-}
-
-function escapeHtml(s) {
-  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
