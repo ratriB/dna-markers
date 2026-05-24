@@ -57,5 +57,49 @@
       "th": "RAPD ไวมากต่อสภาวะ PCR (low annealing temp) ทำให้ pattern เปลี่ยนไปตามห้องแล็บ → SCAR แก้ปัญหาโดยใช้ primer เฉพาะที่จับ DNA แน่นและทำซ้ำได้ดี — เป็นเครื่องหมายที่นำไปใช้ในงาน MAS ได้จริง",
       "en": "RAPD is highly sensitive to PCR conditions (low annealing temperature) so band patterns shift between labs. SCAR solves this by using specific primers that bind tightly and reproducibly — turning the original band into a usable MAS marker."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "SCAR สามารถเป็นได้ทั้ง dominant หรือ codominant — ขึ้นกับอะไร?",
+      "en": "SCAR can be either dominant or codominant — what does it depend on?"
+    },
+    "choices": [
+      { "th": "ขึ้นกับ enzyme ที่เลือกใช้",
+        "en": "Depends on the enzyme chosen" },
+      { "th": "ขึ้นกับขนาด amplicon เฉพาะตัว",
+        "en": "Depends on amplicon size alone" },
+      { "th": "ขึ้นกับ<strong>ธรรมชาติของ polymorphism</strong>: ถ้า 2 allele ต่างกันที่ขนาด amplicon (เช่น มี/ไม่มี insertion) → codominant (เห็น band 2 ขนาด) · ถ้า 1 allele มี primer binding site อีก allele ไม่มี → dominant (เห็น band มี/ไม่มี)",
+        "en": "Depends on the <strong>nature of the polymorphism</strong>: if the two alleles differ in amplicon size (e.g., insertion present/absent) → codominant (two bands visible) · if one allele has the primer binding site while the other does not → dominant (band present/absent)" },
+      { "th": "ขึ้นกับห้องแล็บที่ทำ",
+        "en": "Depends on the lab running it" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "SCAR ที่นิยมในงานพืชส่วนใหญ่เป็น<strong>codominant</strong> — ออกแบบ primer ครอบ insertion/deletion ที่ทำให้ amplicon ต่างกัน (เช่น 480 vs 430 bp ในตัวอย่าง gene M) · แต่ถ้า original RAPD band หายไปเพราะ allele มี mutation ที่ทำลาย primer binding site → SCAR ที่ตามมาจะเป็น dominant (เหมือน RAPD เดิม) — สามารถดูได้จาก primer design",
+      "en": "Most plant SCARs are <strong>codominant</strong> — primers flank an insertion/deletion that gives different amplicon sizes (e.g., 480 vs 430 bp in the gene M example). But if the original RAPD band disappeared because of a mutation destroying the primer-binding site, the resulting SCAR is dominant (like the original RAPD) — you can tell from the primer design."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "Workflow หลักในการเปลี่ยน <strong>RAPD band → SCAR marker</strong> คืออะไร?",
+      "en": "What is the main workflow to convert a <strong>RAPD band → SCAR marker</strong>?"
+    },
+    "choices": [
+      { "th": "รัน RAPD อีกครั้งด้วย random primer ใหม่",
+        "en": "Re-run RAPD with a new random primer" },
+      { "th": "ปรับ annealing temperature ให้สูงขึ้น",
+        "en": "Raise the annealing temperature" },
+      { "th": "ตัด band ที่สนใจออกจาก gel (gel extraction) → sequence band นั้น → ออกแบบ primer คู่ใหม่ที่จับลำดับ flanking ของ band → validate primer บน panel ตัวอย่าง",
+        "en": "Excise the band of interest from the gel (gel extraction) → sequence it → design new specific primers that anneal to the band's flanking regions → validate the primers on the sample panel" },
+      { "th": "แช่ band ใน enzyme ใหม่",
+        "en": "Soak the band in a different enzyme" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "ขั้นตอน convert RAPD → SCAR: (1) ตัด band ที่ polymorphic ออกจาก gel (2) sequence band นั้น (Sanger หรือ NGS) (3) ออกแบบ primer 18-25 nt จากปลายของ sequence (Tm ~58-65°C) (4) ทดสอบ primer ใหม่บน panel — ควรได้ band เดิม (ขนาดเดิม) แต่<strong>specific และ reproducible</strong> · ผลที่ได้คือ marker ที่สามารถใช้ในงานจริง MAS ได้",
+      "en": "Convert workflow: (1) excise the polymorphic band from gel, (2) sequence it (Sanger or NGS), (3) design 18–25 nt primers from the ends of the sequence (Tm ~58–65 °C), (4) test on the panel — should regenerate the same band (same size) but now <strong>specific and reproducible</strong> · the result is a marker usable in real MAS work."
+    }
   }
 ]

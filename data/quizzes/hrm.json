@@ -48,5 +48,49 @@
       "th": "HRM ทำใน real-time PCR เครื่องเดียวกัน ตั้งแต่ amplification ถึงอ่านผล — ไม่ต้องเปิดหลอด ไม่ต้องตัด ไม่ต้องรัน gel · เร็วและลดความเสี่ยงปนเปื้อน — แต่ <em>ต้องการเครื่อง real-time PCR ที่มี HRM module</em>",
       "en": "HRM runs entirely inside a real-time PCR machine — amplification through analysis without ever opening the tube. No digestion, no gel. Fast and contamination-safe — but does require a real-time PCR instrument with an HRM module."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ทำไม HRM ต้องใช้ <strong>saturating dye</strong> (LCGreen, EvaGreen) แทน SYBR Green I ที่ใช้ใน qPCR ทั่วไป?",
+      "en": "Why does HRM require a <strong>saturating dye</strong> (LCGreen, EvaGreen) rather than the SYBR Green I used in ordinary qPCR?"
+    },
+    "choices": [
+      { "th": "Saturating dye ราคาถูกกว่า",
+        "en": "Saturating dyes are cheaper" },
+      { "th": "Saturating dye จับ dsDNA แน่นทุกตำแหน่งโดย<strong>ไม่ inhibit PCR</strong> → fluorescence สะท้อนการ melt ของ DNA ตรง · SYBR Green I จะ <em>redistribute</em> ระหว่าง melt (หลุดจากที่หลอมแล้วไปจับที่ยังไม่หลอม) → distort curve ทำให้ Tm คลาดเคลื่อน",
+        "en": "Saturating dyes bind dsDNA densely without <strong>inhibiting PCR</strong> → fluorescence directly reflects DNA melting · SYBR Green I <em>redistributes</em> during melting (jumping off melted regions to bind unmelted regions) → distorts the curve and shifts Tm" },
+      { "th": "SYBR Green I ใช้กับ Taq ไม่ได้",
+        "en": "SYBR Green I doesn't work with Taq" },
+      { "th": "Saturating dye เรืองแสงสีต่างกัน",
+        "en": "Saturating dyes fluoresce different colors" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Saturating dye (LCGreen, EvaGreen, SYTO 9) ถูกออกแบบให้จับ dsDNA ในความเข้มข้นสูง (saturate) โดยไม่รบกวน PCR · เมื่อ DNA melt — dye หลุดออก fluorescence ลดลงตามจริง · SYBR Green I ใช้ที่ความเข้มข้นต่ำ (มิฉะนั้น inhibit PCR) + <em>redistribute</em> ขณะ melt — curve ไม่แม่นยำพอสำหรับการอ่าน Tm ละเอียดของ SNP · นี่คือเหตุผลที่ HRM ต้องใช้ dye ที่ออกแบบมาเฉพาะ",
+      "en": "Saturating dyes (LCGreen, EvaGreen, SYTO 9) are designed to bind dsDNA at high density without inhibiting PCR. As DNA melts, the dye is released and fluorescence drops faithfully · SYBR Green I must be used at low concentration (or it inhibits PCR) and <em>redistributes</em> during melting — the curve isn't accurate enough for fine SNP-level Tm reading · this is why HRM requires a dye specifically designed for it."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ตาม SNP class ของ HRM (Class 1–4) — SNP แบบไหน<strong>ยากที่สุด</strong>ที่จะแยกด้วย HRM ตามปกติ?",
+      "en": "By the SNP class system (Class 1–4), which SNP type is the <strong>hardest</strong> to distinguish with standard HRM?"
+    },
+    "choices": [
+      { "th": "Class 1 (C↔T หรือ G↔A)",
+        "en": "Class 1 (C↔T or G↔A)" },
+      { "th": "Class 2 (C↔A หรือ G↔T)",
+        "en": "Class 2 (C↔A or G↔T)" },
+      { "th": "Class 3 (C↔G)",
+        "en": "Class 3 (C↔G)" },
+      { "th": "<strong>Class 4 (A↔T)</strong> — มี Tm shift น้อยมาก (&lt;0.2°C) เพราะคู่เบสยังเป็น A-T เหมือนเดิม · มักต้องใช้ unlabelled probe HRM ช่วย",
+        "en": "<strong>Class 4 (A↔T)</strong> — gives the smallest Tm shift (&lt;0.2 °C) because the base pair is still A-T · usually requires unlabelled-probe HRM to discriminate" }
+    ],
+    "answer": 3,
+    "explain": {
+      "th": "หลักการ: Tm ของ duplex ขึ้นกับ hydrogen bonds (A-T = 2 bond, G-C = 3 bond) + GC content รอบ ๆ · <strong>Class 4 (A↔T)</strong> เปลี่ยน base แต่ pair ยังเป็น A-T → Tm แทบไม่เปลี่ยน · Class 1 (C↔T, G↔A) เปลี่ยนจาก 3-bond pair เป็น 2-bond pair → Tm shift ใหญ่ที่สุด · นี่เป็นสาเหตุที่ HRM ไม่เหมาะกับ SNP ทุกประเภท — Class 4 มักต้องใช้ technique อื่น (KASP, SBE/MassArray) หรือ HRM แบบมี unlabelled probe ช่วยขยาย shift",
+      "en": "Principle: duplex Tm depends on hydrogen bonds (A-T = 2 bonds, G-C = 3 bonds) plus surrounding GC content · <strong>Class 4 (A↔T)</strong> swaps bases but the pair is still A-T → barely any Tm change · Class 1 (C↔T, G↔A) swaps a 3-bond pair for a 2-bond pair → biggest Tm shift · this is why HRM can't handle every SNP — Class 4 often needs different techniques (KASP, SBE/MassArray) or unlabelled-probe HRM to amplify the shift."
+    }
   }
 ]

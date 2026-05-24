@@ -54,5 +54,49 @@
       "th": "Single reaction = ลดเวลา/ค่าใช้จ่าย; control band ช่วยยืนยันว่า PCR ทำงานได้แม้ allele-specific bands จะหายไป (ไม่เกิด false-negative); และ band pattern อ่าน genotype ได้ทันทีโดยไม่ต้องเปรียบเทียบหลายหลอด",
       "en": "A single reaction saves time and cost; the control band confirms the PCR worked even when an allele-specific band is absent (guards against false negatives); and the band pattern directly reveals the genotype with no inter-tube comparison."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "บทบาทของ <strong>outer primers (OF + OR)</strong> ใน Tetra-ARMS คืออะไร?",
+      "en": "What is the role of the <strong>outer primers (OF + OR)</strong> in Tetra-ARMS?"
+    },
+    "choices": [
+      { "th": "ทำหน้าที่ตัด DNA",
+        "en": "They cut the DNA" },
+      { "th": "ขยาย <strong>control band ยาวที่เห็นเสมอ</strong>ทุก genotype — ทำหน้าที่เป็น (1) internal PCR control ยืนยันว่า PCR ทำงาน และ (2) template ตั้งต้นที่ inner primer ใช้ขยายต่อ",
+        "en": "Amplify a <strong>long control band that always appears</strong> in every genotype — serves as (1) an internal PCR control confirming the reaction worked, and (2) the starting template the inner primers further amplify" },
+      { "th": "ตรวจสอบความบริสุทธิ์ของ DNA template",
+        "en": "Verify DNA template purity" },
+      { "th": "ทำให้ inner primers จับ template ดีขึ้น",
+        "en": "Improve the inner primers' template binding" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Control band สำคัญมากในการแปลผล — ถ้า inner-allele band ไม่ขึ้น (เช่น เห็นแต่ control band) สามารถยืนยันได้ว่า<strong>ตัวอย่างเป็น homozygote ของอีก allele หนึ่ง</strong> · ไม่ใช่ PCR fail · ลด false-negative ได้มาก · นี่คือข้อได้เปรียบใหญ่ของ Tetra-ARMS เทียบกับ single-tube ARMS ที่ไม่มี internal control",
+      "en": "The control band is crucial for interpretation — if no inner-allele band appears (only the control), you can confirm the sample <strong>is homozygous for the other allele</strong>, not that PCR failed. Greatly reduces false negatives — a major advantage of Tetra-ARMS over single-tube ARMS which lacks an internal control."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "Tetra-ARMS inner primer มักออกแบบให้มี <strong>mismatch ตำแหน่งที่ −2</strong> (ข้าง ๆ ปลาย 3' specificity base) — เพื่ออะไร?",
+      "en": "Tetra-ARMS inner primers are usually designed with <strong>a deliberate mismatch at the −2 position</strong> (next to the 3' specificity base) — why?"
+    },
+    "choices": [
+      { "th": "ทำให้ primer ออกแบบง่ายขึ้น",
+        "en": "Makes the primer easier to design" },
+      { "th": "ป้องกัน primer-dimer",
+        "en": "Prevents primer-dimers" },
+      { "th": "ลด stability ของ primer-template duplex แม้แต่ตอนที่ 3' ก็ mismatch กับ non-target allele → เพิ่ม <strong>secondary discrimination</strong> ทำให้แยก allele ได้ชัดเจนขึ้น (Ye & Day 2001)",
+        "en": "Destabilizes the primer-template duplex further when the 3' end mismatches the non-target allele → adds <strong>secondary discrimination</strong> for cleaner allele separation (Ye & Day 2001)" },
+      { "th": "เพิ่ม Tm ของ primer",
+        "en": "Raises the primer's Tm" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Mismatch ที่ −2 ทำให้ primer-template เสถียรน้อยลง · ในกรณี non-target allele (3' ไม่ match อยู่แล้ว) → duplex เสถียรน้อยมาก → Taq แทบไม่ extend → <strong>false positive ลด</strong> · ในกรณี target allele (3' match) → mismatch ที่ −2 ทำให้ duplex เสถียรน้อยลงเช่นกัน แต่ Taq ยังสามารถ extend ได้ · การออกแบบนี้สร้าง 'discrimination gap' ที่กว้างขึ้นระหว่าง target/non-target — เป็น tip จาก Ye & Day (2001) ที่ใช้กันทั่วไปในปัจจุบัน",
+      "en": "The −2 mismatch reduces primer-template stability. On the non-target allele (where the 3' end is already mismatched), stability drops dramatically → Taq barely extends → <strong>false positives reduced</strong>. On the target allele (3' matched), the −2 mismatch lowers stability somewhat but Taq still extends. This widens the 'discrimination gap' between target and non-target — a tip from Ye & Day (2001) now standard practice."
+    }
   }
 ]

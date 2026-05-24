@@ -56,5 +56,49 @@
       "th": "SNP ส่วนใหญ่ไม่ได้อยู่ใน restriction site → ใช้ CAPs ตรง ๆ ไม่ได้ จึงต้องใช้ dCAPs (ออกแบบ primer mismatch เพื่อสร้าง site) หรือเปลี่ยนไป ARMS-based markers",
       "en": "Most SNPs do not happen to lie inside a restriction-enzyme recognition site. For those, dCAPs (which engineers a site via a mismatched primer) or ARMS-based methods are used instead."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ทำไม CAPs จึงทำ <strong>PCR ก่อนแล้วค่อย cleave</strong> — ไม่ทำ cleave ก่อนแล้วค่อย PCR เหมือน RFLP?",
+      "en": "Why does CAPs do <strong>PCR first, then cleave</strong> — instead of cleaving first like RFLP?"
+    },
+    "choices": [
+      { "th": "PCR ก่อนเพื่อทำให้ DNA stable",
+        "en": "PCR first to stabilize the DNA" },
+      { "th": "PCR amplify เฉพาะ locus เป้าหมาย → เมื่อตัดได้ band ของ locus นั้น<strong>โดยตรง</strong>บน stained gel ไม่ต้องอาศัย probe · ต่างจาก RFLP ที่ digest จีโนมทั้งหมด → เห็น smear → ต้อง Southern blot ตามมา",
+        "en": "PCR amplifies only the target locus → after digestion, locus-specific bands are <strong>directly visible</strong> on a stained gel, no probe needed · unlike RFLP which digests the whole genome → smear → requires Southern blot afterwards" },
+      { "th": "PCR ก่อนเพื่อลดปริมาณ enzyme ที่ใช้",
+        "en": "PCR first to reduce enzyme usage" },
+      { "th": "PCR ก่อนเพื่อให้ enzyme ตัดง่ายขึ้น",
+        "en": "PCR first makes the enzyme cut more easily" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "นี่คือนวัตกรรมสำคัญของ CAPs: เปลี่ยน RFLP ที่ต้องใช้ Southern blot (หลายวัน) → เป็น PCR + digest + gel (ทำใน 1 วัน) · <strong>'C' ใน CAPs ย่อมาจาก Cleaved (ตัดแล้ว)</strong> — กระบวนการตัดเกิดหลัง amplify ทำให้ band ของ locus เป้าหมายเด่นชัด อ่านบน stained gel ได้เลย",
+      "en": "This is CAPs' key innovation: transforming RFLP (which needs a multi-day Southern blot) into PCR + digest + gel (done in one day). The <strong>'C' in CAPs stands for Cleaved</strong> — cleavage happens after amplification, so the target-locus bands stand out cleanly and can be read directly on a stained gel."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ในการออกแบบ CAPs สำหรับ SNP ใหม่ สิ่งที่ต้องตรวจสอบเป็น<strong>อันดับแรก</strong>คืออะไร?",
+      "en": "When designing a CAPs assay for a new SNP, what must you check <strong>first</strong>?"
+    },
+    "choices": [
+      { "th": "ขนาดของ amplicon ต้อง > 300 bp",
+        "en": "The amplicon size must be > 300 bp" },
+      { "th": "ราคา enzyme",
+        "en": "The enzyme's price" },
+      { "th": "SNP นั้นต้องอยู่ใน recognition site ของ restriction enzyme บางชนิด — และ allele 2 ตัวต้อง<strong>สร้าง</strong>หรือ<strong>ทำลาย</strong> site นั้น (ตรวจด้วย in silico digestion เช่น NEBcutter หรือ dCAPs Finder)",
+        "en": "The SNP must lie within some restriction enzyme's recognition site — and the two alleles must <strong>create</strong> or <strong>destroy</strong> that site (verify in silico with tools like NEBcutter or dCAPs Finder)" },
+      { "th": "ความบริสุทธิ์ของ DNA template",
+        "en": "The purity of the DNA template" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "ขั้นตอนสำคัญที่สุดในการออกแบบ CAPs: ต้องหา enzyme ที่ตัด allele หนึ่งและไม่ตัดอีก allele · ถ้าหา enzyme ไม่ได้ (SNP ไม่ได้อยู่ในของ site ใด — ประมาณ 75% ของ SNP) → ใช้ CAPs ตรง ๆ ไม่ได้ → ต้องไป <strong>dCAPs</strong> (ออกแบบ primer ที่มี mismatch เพื่อ engineer site ขึ้นมาเอง) หรือเปลี่ยนเทคนิค",
+      "en": "The single most important design step in CAPs: find an enzyme that cuts one allele but not the other. If no such enzyme exists (~75% of SNPs don't lie in any natural recognition site), CAPs can't be used directly — switch to <strong>dCAPs</strong> (which engineers a site via a primer mismatch) or use a different technique."
+    }
   }
 ]

@@ -64,5 +64,49 @@
       "th": "RAPD ไวต่อ annealing temperature, MgCl₂, polymerase brand → band pattern อาจต่างกันระหว่างห้องแล็บ + เป็น dominant marker — 2 ข้อนี้ทำให้ไม่เหมาะสำหรับ MAS หรือ marker registration ในปัจจุบัน · SSR (codominant + reproducible) และ SNP-based markers (KASP, HRM) มาแทนที่",
       "en": "RAPD is sensitive to annealing temperature, MgCl₂, and polymerase brand → band patterns can shift between labs. Combined with its dominant nature, this makes RAPD unsuitable for MAS or marker registration today. SSRs (codominant + reproducible) and SNP-based assays (KASP, HRM) have largely replaced it."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ทำไม RAPD ขยาย DNA ได้โดย<strong>ไม่ต้องรู้ลำดับเบสมาก่อน</strong>?",
+      "en": "Why can RAPD amplify DNA <strong>without prior sequence information</strong>?"
+    },
+    "choices": [
+      { "th": "ใช้ universal primer ที่ออกแบบจาก database",
+        "en": "Uses a universal primer designed from a sequence database" },
+      { "th": "Primer สั้น ~10 nt + annealing temp ต่ำ ~36°C → primer จับ DNA ที่ตำแหน่งสุ่มจำนวนมากในจีโนม · เมื่อมี 2 site หันเข้าหากันภายใน ~3 kb → amplify ได้ band โดยอัตโนมัติ",
+        "en": "A short ~10-nt primer at low annealing temperature ~36 °C binds many random sites across the genome; whenever two sites face each other within ~3 kb, that region amplifies into a band — no sequence knowledge required" },
+      { "th": "Primer ที่จำเพาะกับ conserved region ที่ทุกสปีชีส์มี",
+        "en": "Primers specific to conserved regions present in every species" },
+      { "th": "RAPD ไม่ได้ใช้ primer เลย",
+        "en": "RAPD doesn't use primers at all" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "นี่เป็นเอกลักษณ์ของ RAPD: ไม่ต้องการ sequence database — เหมาะกับสิ่งมีชีวิตที่ยังไม่มีจีโนมอ้างอิง (non-model organism) · ขณะเดียวกัน ความเป็น 'สุ่ม' นี้คือสาเหตุที่ band pattern อาจต่างกันระหว่างห้องแล็บ — เป็น <em>tradeoff</em> ระหว่างความสะดวกกับความสม่ำเสมอ",
+      "en": "This is RAPD's signature: no sequence database needed — perfect for non-model organisms without a reference genome. The flip side is that this 'random' character is also why band patterns can shift between labs — a <em>tradeoff</em> between convenience and consistency."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "RAPD เหมาะกับงานประเภทใดมากที่สุดในปัจจุบัน?",
+      "en": "Which application is RAPD best suited for today?"
+    },
+    "choices": [
+      { "th": "Genetic fingerprinting / diversity screening ในสิ่งมีชีวิตที่ไม่มี reference sequence — ราคาถูก รวดเร็ว",
+        "en": "Quick fingerprinting and genetic-diversity screening in organisms without a reference sequence — cheap and fast" },
+      { "th": "การลงทะเบียน marker เชิงพาณิชย์สำหรับ MAS",
+        "en": "Commercial marker registration for marker-assisted selection (MAS)" },
+      { "th": "Paternity testing ที่ต้องการความแม่นยำสูง",
+        "en": "High-accuracy paternity testing" },
+      { "th": "การตรวจ SNP เดี่ยวที่ทราบลำดับเบสล่วงหน้า",
+        "en": "Detecting a single SNP whose sequence is already known" }
+    ],
+    "answer": 0,
+    "explain": {
+      "th": "RAPD เป็น dominant + sensitive ต่อ PCR conditions → ไม่เหมาะกับงานที่ต้องการความแม่นยำสูง · แต่ดีมากสำหรับการ<strong>สำรวจความหลากหลาย</strong> (species identification, population diversity, preliminary screening) ที่ต้องการคำตอบเร็วและประหยัด · งาน MAS / paternity ใช้ SSR หรือ SNP marker (KASP/HRM) แทน",
+      "en": "RAPD is dominant and sensitive to PCR conditions → not for precision work. But it's excellent for <strong>diversity surveys</strong> (species identification, population diversity, preliminary screening) that need quick, cheap answers. MAS / paternity testing uses SSR or SNP markers (KASP/HRM) instead."
+    }
   }
 ]

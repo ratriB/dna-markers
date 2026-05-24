@@ -60,5 +60,49 @@
       "th": "Replication slippage — เมื่อ DNA polymerase ก๊อปปี้ผ่านลำดับซ้ำสั้น ๆ สาย template หรือ nascent strand อาจหลุดและกลับมา re-pair ผิด register → ทำให้จำนวนซ้ำเพิ่มหรือลดทีละหน่วย · เป็นกลไกหลักที่ทำให้ SSR มี allele หลากหลายและมี mutation rate สูงกว่า SNP",
       "en": "Replication slippage — when DNA polymerase copies a short tandem repeat, the template or nascent strand can dissociate and reanneal in the wrong register, gaining or losing repeat units. This is the main reason SSRs are multiallelic and mutate faster than SNPs."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "<strong>Multiallelic</strong> ของ SSR หมายถึงอะไร และทำไมจึงเป็นข้อได้เปรียบ?",
+      "en": "What does <strong>multiallelic</strong> mean for SSR, and why is it an advantage?"
+    },
+    "choices": [
+      { "th": "SSR มี allele เด่นและ allele ด้อย",
+        "en": "SSR has dominant and recessive alleles" },
+      { "th": "ใน 1 locus สามารถมี allele หลายแบบในประชากร (เช่น (CA)₁₂, (CA)₁₆, (CA)₂₀, ...) — ให้ <strong>information content สูง</strong>กว่า biallelic SNP มาก · 1 SSR locus แยก individual ได้หลายสิบ genotype ขณะที่ SNP มีแค่ 3 genotype (AA, Aa, aa)",
+        "en": "At one locus, multiple alleles can coexist in the population (e.g., (CA)₁₂, (CA)₁₆, (CA)₂₀, ...) — gives <strong>much higher information content</strong> than biallelic SNPs · one SSR locus can distinguish dozens of genotypes; one SNP can only distinguish 3 (AA, Aa, aa)" },
+      { "th": "SSR แสดง band หลาย band ต่อ allele",
+        "en": "SSR shows multiple bands per allele" },
+      { "th": "SSR ตรวจได้ใน multiple genome",
+        "en": "SSR can be detected in multiple genomes" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "<strong>Information content</strong> คือเหตุผลหลักที่ SSR ครองงาน parentage และ population genetics: 1 SSR locus ≈ ข้อมูลเทียบเท่า 5-10 SNP loci · ทำให้ panel SSR ขนาดเล็ก (~10-20 loci) ก็เพียงพอสำหรับ fingerprinting individual ในขณะที่ SNP panel ต้องใช้หลายร้อย locus · นี่คือเหตุผลที่ SSR ยังคงเป็น marker หลักใน plant breeding แม้ในยุค NGS",
+      "en": "<strong>Information content</strong> is the main reason SSR dominates parentage testing and population genetics: 1 SSR locus ≈ 5–10 SNP loci in information content · a small SSR panel (~10–20 loci) suffices for individual fingerprinting, while SNP panels need hundreds · that's why SSR remains a workhorse in plant breeding even in the NGS era."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "เมื่อออกแบบ primer สำหรับ SSR จะวาง primer ที่บริเวณใด?",
+      "en": "When designing PCR primers for an SSR, where should they anneal?"
+    },
+    "choices": [
+      { "th": "ภายในบริเวณซ้ำ (CA) เอง",
+        "en": "Inside the repeat region itself" },
+      { "th": "บริเวณ <strong>flanking ที่อยู่ขนาบ 2 ข้าง</strong>ของบริเวณซ้ำ (เพราะ flanking region มัก<strong>conserved</strong>ระหว่าง individual ขณะที่จำนวนซ้ำเปลี่ยน)",
+        "en": "In the <strong>conserved flanking regions on either side</strong> of the repeat (flanking sequences are typically <strong>conserved</strong> between individuals, while the repeat count varies)" },
+      { "th": "ที่ไหนก็ได้ในยีน",
+        "en": "Anywhere in the gene" },
+      { "th": "ใช้ random primer แบบ RAPD",
+        "en": "Use random primers like RAPD" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "หลักการสำคัญในการออกแบบ SSR primer: วาง primer บน flanking region ที่ conserved (สั้นที่สุด ~100-300 bp รอบ repeat) เพื่อให้ primer จับได้ทุก individual โดยไม่ขึ้นกับจำนวน repeat · บริเวณซ้ำเองมี variable length ใส่ primer ตรงนั้นจะไม่ทำงาน · <em>ข้อมูลสำหรับออกแบบ SSR primer ต้องได้จาก sequencing</em> (BLAST จาก database หรือ genome assembly) — เป็นเหตุผลที่ SSR ไม่ใช่ 'รู้ลำดับเบสฟรี' เหมือน RAPD",
+      "en": "Key SSR primer design principle: anneal primers to the conserved flanking regions (typically ~100–300 bp around the repeat) so they bind every individual regardless of repeat count · the repeat itself is variable; primers there wouldn't work · <em>designing SSR primers requires sequence data</em> (BLAST against a database or genome assembly) — that's why SSRs are not 'sequence-free' like RAPD."
+    }
   }
 ]

@@ -48,5 +48,49 @@
       "th": "MALDI-TOF เป็นเครื่องราคาสูง · ใช้กับ SNP จำนวนระดับ 100–1000 ต่อ run (ดีกว่า KASP ในแง่ multiplex แต่น้อยกว่า NGS-based genotyping) · ปัจจุบันถูกแทนที่ด้วย NGS arrays สำหรับ ultra-high throughput · แต่ยังนิยมในงาน clinical ที่ต้องการความแม่นยำสูง",
       "en": "MALDI-TOF instruments are expensive. Throughput is 100–1000 SNPs per run — better multiplexing than KASP but lower throughput than NGS arrays. Largely supplanted by NGS for ultra-high throughput, yet still popular in clinical genotyping where peak accuracy matters."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ทำไม SBE ใช้ <strong>ddNTPs</strong> ไม่ใช่ dNTPs ปกติ?",
+      "en": "Why does SBE use <strong>ddNTPs</strong> instead of normal dNTPs?"
+    },
+    "choices": [
+      { "th": "ddNTPs ราคาถูกกว่า",
+        "en": "ddNTPs are cheaper" },
+      { "th": "ddNTPs เรืองแสงในตัว",
+        "en": "ddNTPs fluoresce on their own" },
+      { "th": "ddNTPs ขาด 3'-OH → Taq เติม<strong>เบสเดียวแล้วหยุด</strong> (chain termination) · extension product = primer + 1 ddNTP เป๊ะ → มวลคำนวณได้ตรง = primer_mass + ddNTP_mass · ถ้าใช้ dNTPs ปกติ polymerase จะ extend ต่อหลายเบส → มวลไม่แน่นอน อ่าน allele ไม่ได้",
+        "en": "ddNTPs lack a 3'-OH → Taq adds <strong>exactly one base then stops</strong> (chain termination) · extension product = primer + 1 ddNTP exactly → mass is precisely calculable = primer_mass + ddNTP_mass · with normal dNTPs polymerase would keep extending → variable mass → can't read alleles" },
+      { "th": "ddNTPs จับ DNA ได้แน่นกว่า",
+        "en": "ddNTPs bind DNA more tightly" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "หลักการ <strong>chain termination</strong> เหมือนกับ Sanger sequencing — ddNTPs ขาด 3'-OH ทำให้ polymerase ไม่สามารถสร้าง phosphodiester bond ถัดไปได้ · ผลคือ extension product ที่มีขนาดและมวลแน่นอน · มวลที่อ่านได้ใน MALDI-TOF จึงตรงกับ ddNTP ที่ถูก incorporate ตามเบสบน template = ระบุ allele ได้แม่นยำ",
+      "en": "<strong>Chain termination</strong> is the same principle as Sanger sequencing — ddNTPs lack a 3'-OH so the polymerase can't form the next phosphodiester bond · the result is an extension product of defined size and mass · the MALDI-TOF mass therefore corresponds exactly to which ddNTP was incorporated according to the template base = unambiguous allele identification."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ถ้า SNP เปลี่ยน allele จาก <strong>ddA ไป ddT</strong> — mass difference ที่เห็นบน mass spectrum เท่ากับเท่าไร?",
+      "en": "If a SNP swaps the incorporated ddNTP from <strong>ddA to ddT</strong> — what mass difference appears on the spectrum?"
+    },
+    "choices": [
+      { "th": "24 Da (ddA−ddC)",
+        "en": "24 Da (ddA−ddC)" },
+      { "th": "<strong>9 Da</strong> (ddA = 313 Da, ddT = 304 Da) — เป็น gap ที่<strong>แคบที่สุด</strong>ระหว่าง ddNTPs ทั้ง 4 ตัว · MALDI-TOF resolution &lt;1 Da จึงยังแยกได้สบาย",
+        "en": "<strong>9 Da</strong> (ddA = 313 Da, ddT = 304 Da) — the <strong>narrowest</strong> gap between any pair of ddNTPs · MALDI-TOF resolution is &lt;1 Da so still easily resolved" },
+      { "th": "16 Da (ddA−ddG)",
+        "en": "16 Da (ddA−ddG)" },
+      { "th": "40 Da (ddG−ddC)",
+        "en": "40 Da (ddG−ddC)" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "มวลของ ddNTP: ddC = 289, ddT = 304, ddA = 313, ddG = 329 Da · gap ระหว่างคู่ที่เป็นไปได้: ddA−ddT = <strong>9 (เล็กสุด)</strong>, ddT−ddC = 15, ddA−ddG = 16, ddA−ddC = 24, ddT−ddG = 25, ddG−ddC = 40 (ใหญ่สุด) · ทุกค่าใหญ่กว่า MALDI resolution หลายเท่า → MassArray จึงตรวจ SNP ได้ทุกประเภท (รวมถึง <strong>A/T ที่ HRM ตรวจยาก</strong>) — เป็นจุดเด่นเทียบกับ HRM",
+      "en": "ddNTP masses: ddC = 289, ddT = 304, ddA = 313, ddG = 329 Da · possible gaps: ddA−ddT = <strong>9 (smallest)</strong>, ddT−ddC = 15, ddA−ddG = 16, ddA−ddC = 24, ddT−ddG = 25, ddG−ddC = 40 (largest) · all are many times larger than MALDI-TOF resolution → MassArray can genotype any SNP (including <strong>A/T which HRM struggles with</strong>) — a key advantage over HRM."
+    }
   }
 ]

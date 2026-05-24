@@ -26,7 +26,7 @@
     ],
     "answer": 1,
     "explain": {
-      "th": "DNA จีโนมตัดได้ fragments หลายพัน — มากเกินไป primer +3 bases ปลาย 3' จะ \"เลือก\" เฉพาะ fragments ที่มีลำดับตรงกับ 3 bases นั้น (1/4³ = 1/64) → ได้ 50–100 band ต่อปฏิกิริยา",
+      "th": "DNA จีโนมตัดได้ fragments หลายพัน — มากเกินไป · primer +3 bases ปลาย 3' จะ \"เลือก\" เฉพาะ fragments ที่มีลำดับตรงกับ 3 bases นั้น (1/4³ = 1/64) → ได้ 50–100 band ต่อปฏิกิริยา",
       "en": "Genomic DNA digestion produces thousands of fragments — too many. The +3 selective bases at the primer 3' end choose only fragments whose sequence matches (1/4³ = 1/64) → 50–100 visible bands per reaction."
     }
   },
@@ -45,6 +45,50 @@
     "explain": {
       "th": "RAPD ใช้ primer สั้น (10 nt) + annealing temp ต่ำ (~36°C) → ไวต่อสภาวะ PCR · AFLP primer ยาวกว่ามาก (~25 nt — รวม adapter) + annealing temp สูง (~65°C) → จับเฉพาะ + ทำซ้ำได้ดี",
       "en": "RAPD uses short primers (10 nt) at low annealing temperature (~36 °C), making it very sensitive to conditions. AFLP primers are much longer (~25 nt including adapter sequence) and anneal at ~65 °C — stringent and reproducible."
+    }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ทำไม AFLP จึงใช้ enzyme 2 ชนิด (rare-cutter + frequent-cutter) เช่น <strong>EcoRI + MseI</strong>?",
+      "en": "Why does AFLP use two enzymes — a rare-cutter + a frequent-cutter (e.g., <strong>EcoRI + MseI</strong>)?"
+    },
+    "choices": [
+      { "th": "เพื่อ backup เผื่อ enzyme หนึ่งไม่ทำงาน",
+        "en": "As a backup in case one enzyme fails" },
+      { "th": "Rare-cutter (6-bp site) ตัดน้อย → ใช้เป็นปลายติด FAM tag · frequent-cutter (4-bp site) ตัดบ่อย → ทำให้ fragments สั้นพอเข้า gel · ผสมกันได้ fragments ส่วนใหญ่เป็น <strong>E-M</strong> (rare ปลายหนึ่ง + frequent อีกปลาย) ที่ขนาดเหมาะกับการอ่าน",
+        "en": "Rare cutter (6-bp) is rare → ideal for the FAM-tagged adapter end · frequent cutter (4-bp) is frequent → shortens fragments to gel-friendly sizes · the mixture produces mostly <strong>E–M</strong> fragments (one rare end, one frequent end) at sizes perfect for analysis" },
+      { "th": "เพื่อให้ adapter จับได้ทั้ง 2 ปลาย (ใช้ enzyme ชนิดเดียวจะไม่จับ)",
+        "en": "So adapters can bind to both ends (one enzyme would prevent binding)" },
+      { "th": "เพื่อลดต้นทุน enzyme",
+        "en": "To reduce enzyme cost" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "เลือก enzyme 2 ชนิดเพื่อ<strong>ควบคุมการกระจายตัวของ fragment</strong>: E-E (rare + rare) ห่างไปและน้อยมาก · M-M (frequent + frequent) สั้นเกินไป + amplify ไม่ได้เพราะ M primer มี +3 selective bases · E-M เป็น sweet spot — ปริมาณเหมาะ + ขนาดเหมาะ + ติด FAM อ่านได้ · นี่คือเหตุผลที่ AFLP ออกแบบให้ rare cutter เป็นตัวที่ติด tag",
+      "en": "The two enzymes <strong>control fragment-size distribution</strong>: E–E (rare+rare) is too sparse, M–M (frequent+frequent) is too short and won't amplify well because the M primer carries +3 selective bases, while E–M is the sweet spot — abundant + manageable size + FAM-readable. This is why AFLP tags the rare-cutter adapter."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "หลัง digest + ligate adapter แล้ว fragments มี 3 ชนิด (E-E, E-M, M-M) — band บน gel ส่วนใหญ่เป็นชนิดไหน?",
+      "en": "After digest + adapter ligation, 3 fragment types exist (E–E, E–M, M–M). Which type produces most of the visible bands on the gel?"
+    },
+    "choices": [
+      { "th": "E-E (EcoRI ปลายทั้ง 2 — น้อยและกระจัดกระจาย)",
+        "en": "E–E (EcoRI on both ends — rare and sparse)" },
+      { "th": "E-M (EcoRI ปลายหนึ่ง + MseI อีกปลาย — ปริมาณมาก + ขนาดเหมาะ + มี FAM tag)",
+        "en": "E–M (EcoRI on one end, MseI on the other — abundant + ideal size + FAM-tagged)" },
+      { "th": "M-M (MseI ปลายทั้ง 2 — สั้นเกินไป + ไม่มี FAM)",
+        "en": "M–M (MseI on both ends — too short + no FAM)" },
+      { "th": "ทั้ง 3 ชนิดในปริมาณเท่ากัน",
+        "en": "All three in equal amounts" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "FAM ติดอยู่ที่ E adapter เพื่อให้เห็น signal — E-M เป็นชนิดที่<strong>มี FAM</strong> (จาก E ปลาย) + <strong>amplify ได้ครบ</strong> จาก E primer + M primer + <strong>ปริมาณเยอะ</strong> เพราะ MseI ตัดบ่อย · E-E ก็มี FAM แต่หายากมาก · M-M ไม่มี FAM และไม่ amplify ดี (primer E ใช้กับมันไม่ได้) → ไม่เห็นบน gel",
+      "en": "FAM is on the E adapter for detection — E–M is the type that <strong>carries FAM</strong> (from the E end) + <strong>amplifies fully</strong> using E primer + M primer + is <strong>abundant</strong> because MseI cuts frequently. E–E has FAM but is much rarer. M–M lacks FAM and doesn't amplify well (E primer can't bind it) → invisible on the gel."
     }
   }
 ]

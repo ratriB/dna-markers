@@ -50,5 +50,49 @@
       "th": "KASP รวมข้อดี allele-specific PCR (ARMS) + fluorescence detection + automation → ต้นทุนต่ำที่สุดในกลุ่ม SNP genotyping ที่ใช้กับ MAS ขนาดใหญ่ · แต่ <em>ต้องออกแบบ primer ใหม่ทุก SNP</em>",
       "en": "KASP combines allele-specific PCR (ARMS) + fluorescence detection + automation, giving the lowest per-genotype cost for industrial-scale MAS — though <em>new primers must be designed for every SNP</em>."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "<strong>FRET cassette</strong> ใน KASP master mix ทำหน้าที่อะไรเมื่อยังไม่มี allele-specific primer ขยาย?",
+      "en": "What does the <strong>FRET cassette</strong> in the KASP master mix do when no allele-specific primer has extended yet?"
+    },
+    "choices": [
+      { "th": "ขยาย DNA template เอง",
+        "en": "Amplifies the DNA template by itself" },
+      { "th": "Fluorophore (F) กับ quencher (Q) อยู่ติดกัน (annealed) → <strong>ไม่เรืองแสง</strong> (background ต่ำ) — รอจนกว่า primer tail ที่ขยายจาก allele-specific PCR จะมาจับ cassette แล้วเลื่อน quencher ออก",
+        "en": "The fluorophore (F) and quencher (Q) are paired (annealed) → <strong>no fluorescence</strong> (low background) — until a newly-synthesized primer tail from allele-specific PCR captures the cassette and displaces the quencher" },
+      { "th": "ตัด primer ที่ mismatch",
+        "en": "Cuts mismatched primers" },
+      { "th": "เพิ่ม Tm ของ PCR",
+        "en": "Increases the PCR Tm" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "นี่คือกลไก <strong>signal-on</strong> ของ KASP: เมื่อ allele-specific primer ขยายสำเร็จ → tail สังเคราะห์ออกมา → tail จับ FRET cassette → quencher หลุด → fluorescence ออกมา · ก่อน amplification หรือถ้า primer ไม่ match → cassette ยัง quenched → ไม่มี signal · ความสะอาดของ signal-on นี้ทำให้ KASP มี dynamic range สูงและอ่าน cluster ได้แม่นยำ",
+      "en": "This is KASP's <strong>signal-on</strong> mechanism: when an allele-specific primer extends successfully → the tail is synthesized → the tail captures the FRET cassette → quencher displaces → fluorescence emerges · before amplification or if the primer doesn't match → the cassette stays quenched → no signal · this clean signal-on gives KASP excellent dynamic range and crisp cluster reads."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ทำไมต้องใส่ <strong>NTC (No Template Control)</strong> ใน KASP และมันปรากฏที่ตำแหน่งใดบน scatter plot?",
+      "en": "Why is a <strong>No Template Control (NTC)</strong> included in KASP, and where does it appear on the scatter plot?"
+    },
+    "choices": [
+      { "th": "NTC อยู่ตรงกลาง cluster Aa",
+        "en": "NTC sits in the middle of the Aa cluster" },
+      { "th": "NTC อยู่มุมขวาบน (FAM สูง + HEX สูง)",
+        "en": "NTC sits in the top-right corner (high FAM + high HEX)" },
+      { "th": "NTC ควบคุม primer-dimer และ contamination · ปรากฏที่ <strong>มุมล่างซ้าย (origin ~0,0)</strong> เพราะไม่มี template → ไม่มี amplification → ไม่มีการ release FRET cassette → ทั้ง 2 channel = background ต่ำ",
+        "en": "NTC controls for primer-dimers and contamination · appears at the <strong>origin (~0,0)</strong> because no template → no amplification → no FRET cassette release → both channels show low background" },
+      { "th": "NTC ทำให้ cluster มีขนาดใหญ่ขึ้น",
+        "en": "NTC makes the clusters larger" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "NTC = no DNA template ในหลอด · ถ้า NTC อยู่ที่ origin (ใกล้ 0,0) → ระบบสะอาด ไม่มี contamination · ถ้า NTC โผล่ขึ้นมา (สัญญาณ FAM หรือ HEX สูง) → อาจมี <em>primer-dimer</em> (primer 2 ตัวจับกันแล้วขยายเอง) หรือ contamination · เป็น <strong>quality control</strong> ที่สำคัญ — KASP run ที่ไม่มี NTC ที่ origin ควรถูกทบทวนก่อนแปลผล genotype",
+      "en": "NTC = a reaction tube with no DNA template · if NTC sits at the origin (near 0,0) → the system is clean, no contamination · if NTC drifts up (high FAM or HEX) → likely <em>primer-dimers</em> (primers self-amplifying) or contamination · critical <strong>quality control</strong> — a KASP run without an NTC at origin should be reviewed before any genotype calls are accepted."
+    }
   }
 ]

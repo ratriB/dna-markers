@@ -55,5 +55,49 @@
       "th": "Site ที่สร้างโดย mismatched primer อยู่ใกล้ปลาย 5' ของ amplicon (เพราะ primer เป็นจุดเริ่มต้นการ amplify) จึงตัดได้เป็นชิ้นเล็ก (ใกล้ primer) + ชิ้นใหญ่ (ส่วนที่เหลือ)",
       "en": "The engineered site lies near the 5' end of the amplicon (right where the mismatched primer anneals), so the cut produces one very short fragment plus one long fragment — by design."
     }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "Mismatch บน dCAPs primer ถูกออกแบบให้อยู่ตำแหน่งใดอย่างแม่นยำ?",
+      "en": "Where exactly is the mismatch placed on a dCAPs primer?"
+    },
+    "choices": [
+      { "th": "ที่ปลาย 5' ของ primer",
+        "en": "At the 5' end of the primer" },
+      { "th": "ตรงกลาง primer",
+        "en": "In the middle of the primer" },
+      { "th": "ใกล้ปลาย 3' (โดยทั่วไป 1-2 base ก่อนตำแหน่ง SNP) — เมื่อรวมกับเบสของ SNP allele เป้าหมาย จะ<strong>สร้าง recognition site ที่สมบูรณ์</strong>สำหรับ enzyme · กับ allele อื่น site จะไม่สมบูรณ์ → ไม่ตัด",
+        "en": "Near the 3' end (typically 1–2 bases before the SNP position) — combined with the target SNP base it <strong>completes a recognition site</strong>; with the other allele the site is incomplete → no cut" },
+      { "th": "หลายตำแหน่งกระจายทั่ว primer",
+        "en": "Multiple positions throughout the primer" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Mismatch ถูกออกแบบให้รวมกับ SNP base ของ allele เป้าหมายแล้วสร้าง recognition site (เช่น GAATTC สำหรับ EcoRI) ใน amplicon ของ allele นั้น · ขณะที่ allele อื่นจะได้ลำดับที่ enzyme ไม่ recognize → ไม่ตัด · Mismatch อยู่<em>ใกล้</em>ปลาย 3' (ไม่ใช่ที่ปลาย 3' เป๊ะ) เพราะ Taq ต้อง extend ผ่านจุดนั้นให้ได้ — ที่ปลาย 3' เป๊ะจะบล็อก extension (เป็นหลักการของ ARMS แทน)",
+      "en": "The mismatch is positioned so that combined with the target allele's SNP base, it spells out a full recognition site (e.g., GAATTC for EcoRI) in that allele's amplicon. The other allele yields a non-cut sequence. The mismatch sits <em>near</em> the 3' end (not right at it) because Taq must extend past it — placing the mismatch right at the 3' end would block extension entirely (that's the ARMS principle, not dCAPs)."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ทำไม dCAPs จึงใช้กับ SNP ได้เกือบทุกตัว ในขณะที่ CAPs ใช้ได้แค่ SNP ส่วนน้อย (~25%)?",
+      "en": "Why can dCAPs be designed for almost any SNP, while CAPs only works on a small fraction (~25%)?"
+    },
+    "choices": [
+      { "th": "dCAPs ใช้ enzyme ที่ตัดได้ทั่วไปกว่า",
+        "en": "dCAPs uses more general-purpose enzymes" },
+      { "th": "dCAPs ขยาย amplicon ที่เล็กกว่า",
+        "en": "dCAPs amplifies smaller amplicons" },
+      { "th": "dCAPs <strong>วิศวกรรม (engineer) สร้าง recognition site ขึ้นมาเอง</strong>ผ่าน primer mismatch — ไม่ขึ้นกับว่า SNP จะอยู่ใน site ตามธรรมชาติของ enzyme หรือไม่ · ขณะที่ CAPs ต้องพึ่งโอกาสที่ SNP บังเอิญอยู่ใน site ของ enzyme บางตัว",
+        "en": "dCAPs <strong>engineers the recognition site itself</strong> via a primer mismatch — independent of whether the SNP happens to sit in any natural enzyme site · CAPs depends on the SNP coincidentally falling in a recognition site" },
+      { "th": "dCAPs ตรวจ SNP หลายตำแหน่งพร้อมกัน",
+        "en": "dCAPs detects multiple SNPs at once" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "ความน่าจะเป็นที่ SNP เดี่ยวจะอยู่ใน site ตามธรรมชาติของ enzyme ทั่วไปประมาณ <strong>25%</strong> (สำหรับ enzyme 6-bp + คิดทั้ง 200+ enzyme ใน database) · dCAPs แก้ปัญหานี้โดย<em>ออกแบบลำดับ</em>ที่ enzyme ของเราตัดได้ ผ่าน primer ที่ใส่ mismatch → ใช้ได้กับ SNP เกือบทุกตัว · เป็นเหตุผลที่ dCAPs ได้รับความนิยมในงานที่มี SNP เป็นเป้าหมายชัดเจน (ก่อนจะมี HRM และ KASP มาแทน)",
+      "en": "The chance that a random SNP lies in a natural recognition site is ~<strong>25%</strong> (across all 200+ commercial 6-bp cutters). dCAPs sidesteps this by <em>designing</em> a cuttable sequence via a mismatched primer — so it works on virtually any SNP. This made dCAPs the go-to choice for targeted SNP genotyping (until HRM and KASP largely took over)."
+    }
   }
 ]
