@@ -2,7 +2,8 @@
 
 > Interactive bilingual (ไทย/EN) web app for teaching DNA markers to undergraduate students at Kasetsart University.
 
-**🔗 Live demo**: *(จะเพิ่ม URL หลัง deploy บน GitHub Pages)*
+**🔗 Live demo**: **https://ratrib.github.io/dna-markers/**
+**📖 Foundation page**: https://ratrib.github.io/dna-markers/foundation.html
 
 📚 ครอบคลุมมาร์กเกอร์ **11 ชนิด + 1 stub**: RFLP · RAPD · AFLP · CAPs · dCAPs · Tetra-ARMS · SCAR · SSR · HRM · KASP · MassArray · Sequencing (เร็วๆ นี้)
 
@@ -108,4 +109,4 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 
 อนุญาตให้ใช้งานเพื่อการศึกษา · ห้ามใช้ในเชิงพาณิชย์ · ต้องอ้างอิงผู้แต่ง
 
 หากใช้ในงานของท่าน กรุณาอ้างอิงเป็น:
-> Boonruangrod, R. (2026). *DNA Markers — Teaching Materials*. Department of Horticulture, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University. [URL]
+> Boonruangrod, R. (2026). *DNA Markers — Teaching Materials*. Department of Horticulture, Faculty of Agriculture at Kamphaeng Saen, Kasetsart University. https://ratrib.github.io/dna-markers/
