@@ -1,0 +1,45 @@
+{
+  "locus": "Gene W (simulated)",
+  "regionLength": 412,
+  "snpPos": 206,
+  "primers": [
+    { "id": "OF", "name": "Outer Forward",     "pos": 0,   "facing": "→", "specificity": "any" },
+    { "id": "OR", "name": "Outer Reverse",     "pos": 412, "facing": "←", "specificity": "any" },
+    { "id": "IF-A", "name": "Inner Forward (A-specific)", "pos": 165, "facing": "→", "specificity": "A" },
+    { "id": "IR-T", "name": "Inner Reverse (T-specific)", "pos": 245, "facing": "←", "specificity": "T" }
+  ],
+  "products": {
+    "control":   { "size": 412, "primers": ["OF","OR"],   "presentWhen": "always",
+                   "label": { "th": "Control (OF+OR)", "en": "Control (OF+OR)" }},
+    "alleleA":   { "size": 248, "primers": ["IF-A","OR"], "presentWhen": "A",
+                   "label": { "th": "Allele A band (IF-A + OR)", "en": "Allele A band (IF-A + OR)" }},
+    "alleleT":   { "size": 218, "primers": ["OF","IR-T"], "presentWhen": "T",
+                   "label": { "th": "Allele T band (OF + IR-T)", "en": "Allele T band (OF + IR-T)" }}
+  },
+  "individuals": [
+    {
+      "id": "Ind-1", "genotype": "AA", "alleles": ["A","A"],
+      "label": { "th": "ตัวอย่าง 1 (AA)", "en": "Ind-1 (AA)" },
+      "description": {
+        "th": "Homozygote AA — เห็น 2 band: control 412 + allele-A 248 (ไม่มี band 218 เพราะไม่มี allele T)",
+        "en": "Homozygote AA — 2 bands: control 412 + allele-A 248 (no 218 band because no T allele present)"
+      }
+    },
+    {
+      "id": "Ind-2", "genotype": "TT", "alleles": ["T","T"],
+      "label": { "th": "ตัวอย่าง 2 (TT)", "en": "Ind-2 (TT)" },
+      "description": {
+        "th": "Homozygote TT — เห็น 2 band: control 412 + allele-T 218 (ไม่มี band 248)",
+        "en": "Homozygote TT — 2 bands: control 412 + allele-T 218 (no 248 band)"
+      }
+    },
+    {
+      "id": "Ind-3", "genotype": "AT", "alleles": ["A","T"],
+      "label": { "th": "ตัวอย่าง 3 (AT)", "en": "Ind-3 (AT)" },
+      "description": {
+        "th": "Heterozygote — เห็น 3 band: control 412 + allele-A 248 + allele-T 218 → codominant",
+        "en": "Heterozygote — 3 bands: control 412 + allele-A 248 + allele-T 218 → codominant"
+      }
+    }
+  ]
+}

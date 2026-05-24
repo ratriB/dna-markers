@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q1",
+    "prompt": { "th": "AFLP ใช้กี่ขั้นตอนหลัก?", "en": "How many main steps does AFLP have?" },
+    "choices": [
+      { "th": "2 (PCR + gel)", "en": "2 (PCR + gel)" },
+      { "th": "3 (digest + PCR + gel)", "en": "3 (digest + PCR + gel)" },
+      { "th": "4 (digest + ligate adapter + pre-amp + selective amp)", "en": "4 (digest + ligate adapter + pre-amp + selective amp)" },
+      { "th": "5 (digest + ligate + sequence + PCR + gel)", "en": "5 (digest + ligate + sequence + PCR + gel)" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "AFLP มี 4 ขั้น: ตัดด้วย enzyme 2 ชนิด → ligate adapter → pre-amplification PCR → selective amplification (primer +3 bases ปลาย 3')",
+      "en": "AFLP has four steps: digest with two enzymes → ligate adapters → pre-amplification PCR → selective amplification (primers with +3 bases at the 3' end)."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": { "th": "Selective primer +3 bases ทำหน้าที่อะไร?", "en": "What is the purpose of the +3 selective bases on AFLP primers?" },
+    "choices": [
+      { "th": "เพิ่ม Tm ของ primer",     "en": "Increases the primer Tm" },
+      { "th": "ลดจำนวน fragments ที่ขยายลง 1/64 → เหลือ band ที่อ่านได้บน gel",
+        "en": "Reduces amplified fragments by 1/64 → leaves a manageable number of bands on the gel" },
+      { "th": "ป้องกัน adapter หลุด",     "en": "Prevents the adapter from falling off" },
+      { "th": "เพิ่มความแม่นยำของ Taq",   "en": "Increases Taq polymerase fidelity" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "DNA จีโนมตัดได้ fragments หลายพัน — มากเกินไป primer +3 bases ปลาย 3' จะ \"เลือก\" เฉพาะ fragments ที่มีลำดับตรงกับ 3 bases นั้น (1/4³ = 1/64) → ได้ 50–100 band ต่อปฏิกิริยา",
+      "en": "Genomic DNA digestion produces thousands of fragments — too many. The +3 selective bases at the primer 3' end choose only fragments whose sequence matches (1/4³ = 1/64) → 50–100 visible bands per reaction."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": { "th": "ทำไม AFLP ทำซ้ำได้ดีกว่า RAPD แม้ทั้งคู่เป็น dominant marker?",
+                "en": "Why is AFLP more reproducible than RAPD even though both are dominant markers?" },
+    "choices": [
+      { "th": "AFLP ใช้ primer สั้นกว่า",          "en": "AFLP uses shorter primers" },
+      { "th": "AFLP ใช้ stringent annealing temperature เพราะ primer ยาว (มี adapter) ขณะ RAPD ใช้ low-stringency กับ primer 10 nt",
+        "en": "AFLP uses stringent annealing (long adapter-binding primers) while RAPD uses low-stringency with 10-nt primers" },
+      { "th": "AFLP ไม่ใช้ Taq",                  "en": "AFLP doesn't use Taq" },
+      { "th": "AFLP รัน gel เร็วกว่า",             "en": "AFLP gels run faster" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RAPD ใช้ primer สั้น (10 nt) + annealing temp ต่ำ (~36°C) → ไวต่อสภาวะ PCR · AFLP primer ยาวกว่ามาก (~25 nt — รวม adapter) + annealing temp สูง (~65°C) → จับเฉพาะ + ทำซ้ำได้ดี",
+      "en": "RAPD uses short primers (10 nt) at low annealing temperature (~36 °C), making it very sensitive to conditions. AFLP primers are much longer (~25 nt including adapter sequence) and anneal at ~65 °C — stringent and reproducible."
+    }
+  }
+]

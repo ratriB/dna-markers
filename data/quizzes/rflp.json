@@ -1,0 +1,104 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "RFLP ย่อมาจากอะไร?",
+      "en": "What does RFLP stand for?"
+    },
+    "choices": [
+      { "th": "Random Fragment Length Polymorphism", "en": "Random Fragment Length Polymorphism" },
+      { "th": "Restriction Fragment Length Polymorphism", "en": "Restriction Fragment Length Polymorphism" },
+      { "th": "Repeated Fragment Length Polymorphism", "en": "Repeated Fragment Length Polymorphism" },
+      { "th": "Restricted Fluorescent Length Probe", "en": "Restricted Fluorescent Length Probe" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RFLP = Restriction Fragment Length Polymorphism — ใช้ enzyme ตัดจำเพาะตรวจความแปรผันของขนาดชิ้น DNA",
+      "en": "RFLP relies on restriction endonucleases that cut DNA only at specific recognition sequences."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "เพราะเหตุใดจึงต้องทำ Southern blot ตามหลังการ run gel ในการทำ RFLP?",
+      "en": "Why is Southern blotting performed after gel electrophoresis in a classical RFLP experiment?"
+    },
+    "choices": [
+      { "th": "เพื่อย้อม DNA ให้เห็นชัดขึ้นบน gel",
+        "en": "To stain the DNA so the bands are easier to see on the gel" },
+      { "th": "เพื่อให้ probe จำเพาะกับ locus ที่สนใจจับเฉพาะ band ของ locus นั้น — ตัด background fragments ของจีโนมที่เหลือออก",
+        "en": "So a locus-specific probe hybridizes only to bands containing that locus, filtering out the thousands of other genomic fragments" },
+      { "th": "เพื่อตัด DNA ให้เป็นชิ้นเล็กลงอีกครั้ง",
+        "en": "To cut the DNA into smaller pieces a second time" },
+      { "th": "เพื่อขยาย DNA ให้มีปริมาณเพียงพอ",
+        "en": "To amplify the DNA to detectable quantities" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "การตัด genomic DNA ได้ชิ้นนับล้าน — ถ้าย้อมตรง ๆ จะเห็นเป็น smear; Southern blot ย้าย DNA ไป membrane แล้วใช้ probe ติดฉลากจับเฉพาะ fragment ที่มี locus ของเรา ทำให้เห็นเป็น band เดี่ยวที่อ่านผลได้",
+      "en": "Digesting genomic DNA produces millions of fragments that appear as a smear on a stained gel. Southern blot transfers the DNA to a membrane and a labeled probe binds only to the fragments containing the target locus, revealing discrete, interpretable bands."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ใน Southern blot ของยีน X ถ้า Ind-3 (Aa heterozygote) เห็นทั้ง band 600 bp และ 1300 bp นี่บ่งบอกคุณสมบัติใดของ RFLP?",
+      "en": "If Ind-3 (Aa heterozygote) shows both 600 bp and 1300 bp bands on the Southern blot, what property of RFLP does this demonstrate?"
+    },
+    "choices": [
+      { "th": "Dominant — เห็น band ของ allele เด่นอย่างเดียว",
+        "en": "Dominant — only the dominant allele's band is visible" },
+      { "th": "Codominant — เห็น band ของทั้งสอง allele แยกแยะ homo/hetero ได้",
+        "en": "Codominant — both alleles produce a band, allowing homo- and heterozygotes to be distinguished" },
+      { "th": "Recessive — band ของ allele ด้อยเท่านั้นที่เห็น",
+        "en": "Recessive — only the recessive allele's band is visible" },
+      { "th": "Epistatic — band หนึ่งบดบังอีก band หนึ่ง",
+        "en": "Epistatic — one band masks the other" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RFLP เป็น codominant marker — heterozygote เห็น band ของทั้งสอง allele พร้อมกัน ต่างจาก dominant markers เช่น RAPD ที่มี/ไม่มี band เท่านั้น",
+      "en": "RFLP is codominant: heterozygotes show bands from both alleles simultaneously, unlike dominant markers (e.g., RAPD) where you only score band-present vs band-absent."
+    }
+  },
+  {
+    "id": "q4",
+    "prompt": {
+      "th": "ถ้า EcoRI ตัด DNA ความยาว 1000 bp เพียง 1 ตำแหน่งที่ตำแหน่ง 300 จะได้กี่แบนด์บน stained gel (ไม่ใช้ probe)?",
+      "en": "EcoRI cuts a 1000 bp DNA at just one position (300). How many bands appear on a stained gel (no probe used)?"
+    },
+    "choices": [
+      { "th": "1 แบนด์ ขนาด 1000 bp",  "en": "1 band of 1000 bp" },
+      { "th": "2 แบนด์ ขนาด 300 และ 700 bp", "en": "2 bands of 300 and 700 bp" },
+      { "th": "3 แบนด์ ขนาด 300, 700 และ 1000 bp", "en": "3 bands at 300, 700, and 1000 bp" },
+      { "th": "ไม่เห็นแบนด์ใด ๆ", "en": "No bands at all" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "การตัด 1 ครั้งบน DNA เส้นตรง = แยกออกเป็น 2 ชิ้น คือ 300 bp และ 700 bp",
+      "en": "A single cut on linear DNA yields exactly two fragments — 300 bp and 700 bp."
+    }
+  },
+  {
+    "id": "q5",
+    "prompt": {
+      "th": "ข้อใดเป็นจุดเด่นและจุดอ่อนสำคัญของ RFLP เมื่อเทียบกับ PCR-based marker?",
+      "en": "Which best describes a key strength and weakness of RFLP versus PCR-based markers?"
+    },
+    "choices": [
+      { "th": "เด่น: ใช้ DNA น้อยมาก / ด้อย: ใช้เครื่องราคาแพง",
+        "en": "Pro: needs very little DNA / Con: needs expensive instruments" },
+      { "th": "เด่น: codominant และผลคงที่ระหว่างห้องแล็บ / ด้อย: ใช้ DNA มากและขั้นตอน Southern blot ยาว",
+        "en": "Pro: codominant and highly reproducible / Con: needs lots of DNA and a long Southern-blot workflow" },
+      { "th": "เด่น: รันเร็วใน 30 นาที / ด้อย: ตรวจได้ทีละล็อกัสเดียว",
+        "en": "Pro: runs in 30 minutes / Con: only one locus per reaction" },
+      { "th": "เด่น: ไม่ต้องรู้ลำดับเบสมาก่อน / ด้อย: เป็น dominant marker เสมอ",
+        "en": "Pro: no prior sequence knowledge needed / Con: always a dominant marker" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RFLP เป็น codominant และผลคงที่ระหว่างห้องแล็บ แต่ใช้ DNA หลายไมโครกรัมและ Southern blot ใช้เวลานาน (หลายวัน) — เป็นเหตุผลที่ PCR-based marker เข้ามาแทนที่",
+      "en": "RFLP is codominant and highly reproducible, but requires several µg of DNA and a multi-day Southern blot — the main reasons PCR-based markers have largely replaced it."
+    }
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "locus": "Gene N — microsatellite (CA)ₙ (simulated)",
+  "motif": "CA",
+  "primerLen": 20,
+  "flankLen": 30,
+  "alleles": {
+    "12": { "count": 12, "size": 124 },
+    "16": { "count": 16, "size": 132 },
+    "20": { "count": 20, "size": 140 }
+  },
+  "individuals": [
+    {
+      "id": "Ind-1",
+      "genotype": "12/12",
+      "alleles": ["12", "12"],
+      "label": { "th": "ตัวอย่าง 1 (12/12)", "en": "Ind-1 (12/12)" },
+      "description": {
+        "th": "Homozygote — homologous chromosome ทั้ง 2 มี (CA)₁₂ → เห็น band 124 bp เพียง band เดียว",
+        "en": "Homozygote — both homologous chromosomes carry (CA)₁₂ → single 124 bp band."
+      }
+    },
+    {
+      "id": "Ind-2",
+      "genotype": "20/20",
+      "alleles": ["20", "20"],
+      "label": { "th": "ตัวอย่าง 2 (20/20)", "en": "Ind-2 (20/20)" },
+      "description": {
+        "th": "Homozygote — homologous chromosome ทั้ง 2 มี (CA)₂₀ → เห็น band 140 bp เพียง band เดียว",
+        "en": "Homozygote — both homologous chromosomes carry (CA)₂₀ → single 140 bp band."
+      }
+    },
+    {
+      "id": "Ind-3",
+      "genotype": "12/20",
+      "alleles": ["12", "20"],
+      "label": { "th": "ตัวอย่าง 3 (12/20)", "en": "Ind-3 (12/20)" },
+      "description": {
+        "th": "Heterozygote — homologous chromosome ตัวหนึ่งมี (CA)₁₂ อีกตัวมี (CA)₂₀ → เห็น 2 band (124 + 140 bp) ← codominant + multiallelic",
+        "en": "Heterozygote — one homologous chromosome has (CA)₁₂, the other (CA)₂₀ → 2 bands visible (124 + 140 bp) ← codominant + multiallelic."
+      }
+    }
+  ]
+}

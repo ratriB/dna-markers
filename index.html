@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="app.title">DNA Markers — แอปการเรียนรู้</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧬</span>
+      <h1 data-i18n="app.title">DNA Markers — แอปการเรียนรู้</h1>
+    </div>
+    <div class="topbar-actions">
+      <a href="foundation.html" class="topbar-link" data-i18n="app.gotoFoundation">📖 ปูพื้นก่อนเรียน</a>
+      <nav class="lang-toggle" aria-label="Language">
+        <button class="lang-btn" data-lang="th" aria-pressed="true">ไทย</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Marker navigation">
+      <h2 data-i18n="nav.markers">เครื่องหมาย DNA</h2>
+      <ul id="marker-nav" class="marker-list">
+        <li><a href="#home" data-route="home" data-i18n="nav.home">หน้าหลัก</a></li>
+        <li class="group" data-i18n="nav.group.gen1">ยุค 1 · Hybridization-based</li>
+        <li><a href="#rflp" data-route="rflp">RFLP</a></li>
+        <li class="group" data-i18n="nav.group.gen2">ยุค 2 · PCR scan (dominant)</li>
+        <li><a href="#rapd" data-route="rapd">RAPD</a></li>
+        <li><a href="#aflp" data-route="aflp">AFLP</a></li>
+        <li class="group" data-i18n="nav.group.gen3">ยุค 3 · PCR sequence-specific (codominant)</li>
+        <li><a href="#caps" data-route="caps">CAPs</a></li>
+        <li><a href="#dcaps" data-route="dcaps">dCAPs</a></li>
+        <li><a href="#tetra-arms" data-route="tetra-arms">Tetra-ARMS</a></li>
+        <li><a href="#scar" data-route="scar">SCAR</a></li>
+        <li><a href="#ssr" data-route="ssr">SSR</a></li>
+        <li class="group" data-i18n="nav.group.gen4">ยุค 4 · High-throughput</li>
+        <li><a href="#hrm" data-route="hrm">HRM</a></li>
+        <li><a href="#kasp" data-route="kasp">KASP</a></li>
+        <li><a href="#massarray" data-route="massarray">MassArray</a></li>
+        <li class="group" data-i18n="nav.group.gen5">ยุค 5 · Sequencing-based</li>
+        <li><a href="#sequencing" data-route="sequencing" class="nav-coming-soon">Sequencing <small data-i18n="nav.comingSoon">เร็วๆ นี้</small></a></li>
+      </ul>
+    </aside>
+
+    <main id="content" class="content" tabindex="-1">
+      <!-- Routed marker content is injected here -->
+    </main>
+  </div>
+
+  <footer class="footer">
+    <small data-i18n="footer.credit">สื่อการเรียนการสอน DNA marker • ใช้เพื่อการศึกษา</small>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

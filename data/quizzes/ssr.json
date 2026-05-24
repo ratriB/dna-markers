@@ -1,0 +1,64 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "ลักษณะใดที่ทำให้ SSR เป็น marker ที่นิยมในงานปรับปรุงพันธุ์?",
+      "en": "Which property makes SSR so popular for breeding?"
+    },
+    "choices": [
+      { "th": "เป็น dominant marker · ตรวจได้ทีละ locus เดียว",
+        "en": "Dominant marker · one locus at a time" },
+      { "th": "เป็น codominant + multiallelic + reproducible + ทำ high-throughput ได้ดี",
+        "en": "Codominant + multiallelic + reproducible + amenable to high-throughput" },
+      { "th": "ไม่ต้องใช้ PCR",
+        "en": "Does not require PCR" },
+      { "th": "ตรวจได้เฉพาะ coding region",
+        "en": "Only detects coding-region variation" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "SSR เป็น codominant (แยก hetero/homo ได้) + มักมีหลาย allele ในประชากร (multiallelic) → ให้ข้อมูลเชิงปริมาณ + reproducible สูง + ทำเป็น panel ขนาดใหญ่ได้ — เป็น marker ยอดนิยมในงาน parentage, MAS, population genetics",
+      "en": "SSRs are codominant (distinguish hetero from homo) + typically multiallelic in populations + highly reproducible + can be assayed in large panels — the workhorse marker for parentage testing, MAS, and population genetics."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "ในชุดข้อมูล (CA)ₙ ที่ Ind-3 มี genotype 12/20 จะเห็น band ขนาดใดบ้างบน gel?",
+      "en": "Given Ind-3 with genotype 12/20 in the dataset, what bands appear on the gel?"
+    },
+    "choices": [
+      { "th": "124 bp อย่างเดียว",          "en": "124 bp only" },
+      { "th": "140 bp อย่างเดียว",          "en": "140 bp only" },
+      { "th": "124 + 140 bp (2 band)",      "en": "124 + 140 bp (2 bands)" },
+      { "th": "ขึ้นกับว่า allele ไหนเด่นกว่า","en": "Depends which allele is dominant" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "SSR เป็น codominant — heterozygote เห็น band ของทั้ง 2 allele พร้อมกัน · (CA)₁₂ → 124 bp · (CA)₂₀ → 140 bp → เห็น 2 band ครับ",
+      "en": "SSRs are codominant — heterozygotes show bands from both alleles. (CA)₁₂ → 124 bp; (CA)₂₀ → 140 bp → 2 bands visible."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "อะไรเป็นกลไกที่ทำให้จำนวน CA-repeats เปลี่ยนแปลงระหว่าง individual?",
+      "en": "What mechanism causes the (CA) repeat number to vary between individuals?"
+    },
+    "choices": [
+      { "th": "Crossing over ใน meiosis",
+        "en": "Crossing over during meiosis" },
+      { "th": "Replication slippage ของ DNA polymerase ในบริเวณซ้ำสั้น ๆ",
+        "en": "Replication slippage by DNA polymerase across short tandem repeats" },
+      { "th": "Restriction enzyme ตัดผิดตำแหน่ง",
+        "en": "Restriction enzymes cutting at the wrong site" },
+      { "th": "UV damage โดยตรง",
+        "en": "Direct UV damage" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Replication slippage — เมื่อ DNA polymerase ก๊อปปี้ผ่านลำดับซ้ำสั้น ๆ สาย template หรือ nascent strand อาจหลุดและกลับมา re-pair ผิด register → ทำให้จำนวนซ้ำเพิ่มหรือลดทีละหน่วย · เป็นกลไกหลักที่ทำให้ SSR มี allele หลากหลายและมี mutation rate สูงกว่า SNP",
+      "en": "Replication slippage — when DNA polymerase copies a short tandem repeat, the template or nascent strand can dissociate and reanneal in the wrong register, gaining or losing repeat units. This is the main reason SSRs are multiallelic and mutate faster than SNPs."
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  { "name": "EcoRI",   "recognition": "GAATTC", "cut": 1, "origin": "Escherichia coli" },
+  { "name": "HindIII", "recognition": "AAGCTT", "cut": 1, "origin": "Haemophilus influenzae" },
+  { "name": "BamHI",   "recognition": "GGATCC", "cut": 1, "origin": "Bacillus amyloliquefaciens" },
+  { "name": "PstI",    "recognition": "CTGCAG", "cut": 5, "origin": "Providencia stuartii" },
+  { "name": "SmaI",    "recognition": "CCCGGG", "cut": 3, "origin": "Serratia marcescens" },
+  { "name": "HaeIII",  "recognition": "GGCC",   "cut": 2, "origin": "Haemophilus aegyptius" },
+  { "name": "AluI",    "recognition": "AGCT",   "cut": 2, "origin": "Arthrobacter luteus" },
+  { "name": "TaqI",    "recognition": "TCGA",   "cut": 1, "origin": "Thermus aquaticus" }
+]

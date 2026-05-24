@@ -1,0 +1,56 @@
+{
+  "primerName": "OPA-01",
+  "primerSeq": "CAGGCCCTTC",
+  "regionLength": 3000,
+  "sites": [
+    { "id": "S1", "pos": 200,  "orient": "F", "variable": false },
+    { "id": "S2", "pos": 800,  "orient": "R", "variable": true  },
+    { "id": "S3", "pos": 1500, "orient": "F", "variable": true  },
+    { "id": "S4", "pos": 2400, "orient": "R", "variable": false }
+  ],
+  "amplifiablePairs": [
+    { "sites": ["S1", "S2"], "size": 600 },
+    { "sites": ["S3", "S4"], "size": 900 }
+  ],
+  "individuals": [
+    {
+      "id": "Ind-1",
+      "genotype": "S2:+/+ · S3:+/+",
+      "alleles": [
+        { "S2": "+", "S3": "+" },
+        { "S2": "+", "S3": "+" }
+      ],
+      "label": { "th": "ตัวอย่าง 1 (มีครบทุก site)", "en": "Ind-1 (all sites present)" },
+      "description": {
+        "th": "ทุก primer binding site อยู่ครบทั้ง 2 homologous chromosome → amplify ทั้ง 2 pair ได้ → เห็น 2 band (600 + 900 bp)",
+        "en": "All primer binding sites present on both homologous chromosomes → both pairs amplify → 2 bands (600 + 900 bp)."
+      }
+    },
+    {
+      "id": "Ind-2",
+      "genotype": "S2:−/− · S3:+/+",
+      "alleles": [
+        { "S2": "-", "S3": "+" },
+        { "S2": "-", "S3": "+" }
+      ],
+      "label": { "th": "ตัวอย่าง 2 (S2 หายทั้ง 2 chr)", "en": "Ind-2 (S2 absent on both chrs)" },
+      "description": {
+        "th": "Mutation ที่ S2 ทำให้ primer จับไม่ได้บนทั้ง 2 homologous chromosome → pair แรกไม่ amplify → เห็นเพียง band 900 bp",
+        "en": "A mutation at S2 prevents primer binding on both homologous chromosomes → the first pair fails to amplify → only the 900 bp band is visible."
+      }
+    },
+    {
+      "id": "Ind-3",
+      "genotype": "S2:+/− · S3:+/+",
+      "alleles": [
+        { "S2": "+", "S3": "+" },
+        { "S2": "-", "S3": "+" }
+      ],
+      "label": { "th": "ตัวอย่าง 3 (S2 heterozygous)", "en": "Ind-3 (S2 heterozygous)" },
+      "description": {
+        "th": "Heterozygous ที่ S2 — homologous chromosome ตัวหนึ่งมี site อีกตัวไม่มี · chromosome ที่มี site ยังคง amplify band 600 ได้ · band ที่เห็นบน gel จึงเหมือนกับ Ind-1 ทุกประการ → <strong>นี่คือ dominance — RAPD แยก hetero ออกจาก homo ไม่ได้</strong>",
+        "en": "Heterozygous at S2 — one homologous chromosome carries the site, the other doesn't. The chromosome with the site still amplifies the 600 bp band, so the gel pattern is identical to Ind-1 → <strong>dominance — RAPD cannot distinguish heterozygotes from dominant homozygotes</strong>."
+      }
+    }
+  ]
+}

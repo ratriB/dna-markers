@@ -1,0 +1,50 @@
+{
+  "locus": "Gene X (simulated)",
+  "length": 1500,
+  "invariantSites": [97, 1397],
+  "variableSite": {
+    "pos": 697,
+    "alleleA_motif": "GAATTC",
+    "alleleA_label": "A (site present)",
+    "allelea_motif": "GAACTC",
+    "allelea_label": "a (site abolished by SNP)"
+  },
+  "probe": {
+    "name": "Probe-X",
+    "start": 400,
+    "end": 600,
+    "length": 200
+  },
+  "individuals": [
+    {
+      "id": "Ind-1",
+      "genotype": "AA",
+      "alleles": ["A", "A"],
+      "label": { "th": "ตัวอย่าง 1 (AA homozygote)",  "en": "Ind-1 (AA homozygote)" },
+      "description": {
+        "th": "Homozygote — ทั้งสอง homologous chromosome มี EcoRI site ที่ตำแหน่ง 697 → Southern blot เห็นเพียง 1 band (~600 bp)",
+        "en": "Homozygote — both homologous chromosomes carry the EcoRI site at position 697 → Southern blot shows a single ~600 bp band."
+      }
+    },
+    {
+      "id": "Ind-2",
+      "genotype": "aa",
+      "alleles": ["a", "a"],
+      "label": { "th": "ตัวอย่าง 2 (aa homozygote)", "en": "Ind-2 (aa homozygote)" },
+      "description": {
+        "th": "Homozygote — SNP ทำให้ EcoRI site หายไปทั้งสอง homologous chromosome → Southern blot เห็น band เดียว (~1300 bp)",
+        "en": "Homozygote — the SNP abolishes the EcoRI site on both homologous chromosomes → Southern blot shows a single ~1300 bp band."
+      }
+    },
+    {
+      "id": "Ind-3",
+      "genotype": "Aa",
+      "alleles": ["A", "a"],
+      "label": { "th": "ตัวอย่าง 3 (Aa heterozygote)", "en": "Ind-3 (Aa heterozygote)" },
+      "description": {
+        "th": "Heterozygote — homologous chromosome ตัวหนึ่งมี site อีกตัวไม่มี → Southern blot เห็น 2 band (~600 และ ~1300 bp) นี่คือคุณสมบัติ codominant ของ RFLP",
+        "en": "Heterozygote — one homologous chromosome carries the site, the other does not → Southern blot shows BOTH ~600 and ~1300 bp bands. This is the codominant nature of RFLP."
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "ampliconLength": 120,
+  "snp": "[A/G]",
+  "tempStart": 75,
+  "tempEnd":   88,
+  "tempStep":  0.2,
+  "genotypes": {
+    "AA": { "tm": 81.5, "label": { "th": "Homozygous AA", "en": "Homozygous AA" }, "color": "#3b82f6" },
+    "BB": { "tm": 82.8, "label": { "th": "Homozygous aa", "en": "Homozygous aa" }, "color": "#ef4444" },
+    "AB": { "tm1": 81.5, "tm2": 82.8, "heteroduplexBroaden": 0.6,
+            "label": { "th": "Heterozygous Aa", "en": "Heterozygous Aa" }, "color": "#a855f7" }
+  }
+}

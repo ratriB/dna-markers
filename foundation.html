@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="foundation.title">ปูพื้นก่อนเรียน DNA marker</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="foundation-body">
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📖</span>
+      <h1 data-i18n="foundation.title">ปูพื้นก่อนเรียน DNA marker</h1>
+    </div>
+    <div class="topbar-actions">
+      <a href="index.html" class="topbar-link" data-i18n="foundation.nav.gotoMarkers">
+        🧬 ไปทดลอง marker
+      </a>
+      <nav class="lang-toggle" aria-label="Language">
+        <button class="lang-btn" data-lang="th" aria-pressed="true">ไทย</button>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar toc-sidebar" aria-label="Table of contents">
+      <h2 data-i18n="foundation.toc.title">สารบัญ</h2>
+      <ul id="foundation-toc" class="toc-list">
+        <li><a href="#overview" data-i18n="foundation.toc.overview">1 · ภาพรวม</a></li>
+        <li><a href="#genome" data-i18n="foundation.toc.genome">2 · โครงสร้างจีโนม</a></li>
+        <li><a href="#locus" data-i18n="foundation.toc.locus">3 · Locus & Allele</a></li>
+        <li><a href="#variation" data-i18n="foundation.toc.variation">4 · SNP vs InDel vs SSR</a></li>
+        <li><a href="#markers-map" data-i18n="foundation.toc.markersMap">5 · เลือก marker</a></li>
+        <li><a href="#marker-types" data-i18n="foundation.toc.markerTypes">6 · ชนิดของ marker</a></li>
+        <li><a href="#timeline" data-i18n="foundation.toc.timeline">7 · ไทม์ไลน์</a></li>
+      </ul>
+      <div class="toc-footer">
+        <a href="index.html" class="toc-cta" data-i18n="foundation.nav.gotoMarkersShort">
+          → ไปหน้า marker
+        </a>
+      </div>
+    </aside>
+
+    <main class="content foundation-content" id="content" tabindex="-1">
+
+      <!-- ─── 1. Overview ────────────────────────────────── -->
+      <section id="overview" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section1.eyebrow">เริ่มที่นี่</span>
+        <h2 data-i18n="foundation.section1.heading">ทำไมต้องเรียน DNA marker?</h2>
+        <div id="overview-body"></div>
+      </section>
+
+      <!-- ─── 2. Genome structure ────────────────────────── -->
+      <section id="genome" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section2.eyebrow">บริบท</span>
+        <h2 data-i18n="foundation.section2.heading">โครงสร้างจีโนม — Marker มาจากที่ไหน?</h2>
+        <div id="genome-body"></div>
+      </section>
+
+      <!-- ─── 3. Locus & Allele ──────────────────────────── -->
+      <section id="locus" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section3.eyebrow">พื้นฐานพันธุศาสตร์</span>
+        <h2 data-i18n="foundation.section3.heading">Locus &amp; Allele บน homologous chromosome</h2>
+        <div id="locus-body"></div>
+      </section>
+
+      <!-- ─── 4. SNP vs InDel ────────────────────────────── -->
+      <section id="variation" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section4.eyebrow">ระดับลำดับเบส</span>
+        <h2 data-i18n="foundation.section4.heading">ความแปรผัน: SNP vs InDel</h2>
+        <div id="variation-body"></div>
+      </section>
+
+      <!-- ─── 5. Variation → Marker ──────────────────────── -->
+      <section id="markers-map" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section6.eyebrow">เชื่อมต่อบทเรียน</span>
+        <h2 data-i18n="foundation.section6.heading">ความแปรผันแบบไหน → ใช้ marker อะไร</h2>
+        <div id="markers-map-body"></div>
+      </section>
+
+      <!-- ─── 6. Marker types (classification) ───────────── -->
+      <section id="marker-types" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.markerTypes.eyebrow">ระบบจำแนก</span>
+        <h2 data-i18n="foundation.markerTypes.heading">ชนิดของ marker — จำแนกตาม inheritance × technology</h2>
+        <div id="marker-types-body"></div>
+      </section>
+
+      <!-- ─── 7. Timeline ────────────────────────────────── -->
+      <section id="timeline" class="found-section">
+        <span class="section-eyebrow" data-i18n="foundation.section7.eyebrow">ภาพประวัติศาสตร์</span>
+        <h2 data-i18n="foundation.section7.heading">ไทม์ไลน์การค้นพบ</h2>
+        <div id="timeline-body"></div>
+      </section>
+
+      <div class="foundation-end-cta">
+        <p data-i18n="foundation.endCta.text">พร้อมแล้ว? ลองทำ marker ในห้องทดลองเสมือนได้เลย</p>
+        <a href="index.html" class="primary-link" data-i18n="foundation.endCta.button">🧬 ไปทดลอง marker →</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <small data-i18n="footer.credit">สื่อการเรียนการสอน DNA marker • ใช้เพื่อการศึกษา</small>
+  </footer>
+
+  <!-- Glossary tooltip (single shared element) -->
+  <div id="glossary-tooltip" class="glossary-tooltip" role="tooltip" aria-hidden="true"></div>
+
+  <script type="module" src="js/foundation.js"></script>
+</body>
+</html>

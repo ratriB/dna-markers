@@ -1,0 +1,59 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "dCAPs ออกแบบมาเพื่อแก้ข้อจำกัดใดของ CAPs?",
+      "en": "Which limitation of CAPs is dCAPs designed to overcome?"
+    },
+    "choices": [
+      { "th": "ขนาด amplicon ที่ใหญ่เกินไป", "en": "Amplicons that are too large" },
+      { "th": "SNP จำนวนมากไม่ได้อยู่ใน recognition site ตามธรรมชาติ",
+        "en": "Many SNPs do not lie within a natural restriction site" },
+      { "th": "ค่าใช้จ่ายของ enzyme สูงเกินไป",
+        "en": "Restriction enzymes are too expensive" },
+      { "th": "ผลที่ได้เป็น dominant marker", "en": "The output is a dominant marker" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "dCAPs สร้าง restriction site ขึ้นมาเองโดยการใส่ mismatch บน primer ใกล้ปลาย 3' ทำให้ใช้ได้กับ SNP ที่ไม่มี site ตามธรรมชาติ",
+      "en": "dCAPs engineers a restriction site using a primer with one or two mismatches near the 3' end, allowing the technique to be used at SNPs lacking a natural site."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "ในชุดข้อมูล (PstI, amplicon 220 bp, SNP [G/A]) — Ind-1 (GG homozygote) จะเห็น band ขนาดเท่าใด?",
+      "en": "In the dataset (PstI, 220 bp amplicon, [G/A] SNP), what bands does Ind-1 (GG homozygote) show?"
+    },
+    "choices": [
+      { "th": "220 bp อย่างเดียว", "en": "220 bp only" },
+      { "th": "22 + 198 bp", "en": "22 + 198 bp" },
+      { "th": "220 + 198 + 22 bp", "en": "220 + 198 + 22 bp" },
+      { "th": "100 + 120 bp", "en": "100 + 120 bp" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "GG homozygote — primer + allele G สร้าง PstI site ทั้งสอง homologous chromosome → ตัดได้ 22 + 198 bp (band 22 bp อาจมองยากเพราะใกล้ปลาย gel)",
+      "en": "GG homozygote — primer + allele G completes the PstI site on both homologous chromosomes, giving 22 + 198 bp fragments (the 22 bp band may be hard to see — runs near the dye front)."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ทำไม fragment ที่ตัดได้ใน dCAPs จึงมักจะ ไม่สมมาตร (เช่น 22 + 198 bp แทน 110 + 110 bp)?",
+      "en": "Why are dCAPs fragments usually highly asymmetric (e.g., 22 + 198 bp rather than 110 + 110 bp)?"
+    },
+    "choices": [
+      { "th": "เพราะ PstI ตัดไม่สมบูรณ์", "en": "Because PstI digests incompletely" },
+      { "th": "เพราะ engineered site ถูกสร้างใกล้ปลาย amplicon (ที่ตำแหน่ง primer) จึงตัดให้ชิ้นเล็ก + ชิ้นใหญ่",
+        "en": "Because the engineered site sits near the amplicon end (at the primer), so it cuts off one short piece + one long piece" },
+      { "th": "เพราะ primer mismatch ทำให้ DNA ขาด", "en": "Because the primer mismatch breaks the DNA" },
+      { "th": "เพราะ amplicon มีขนาดไม่แน่นอน", "en": "Because the amplicon length varies" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Site ที่สร้างโดย mismatched primer อยู่ใกล้ปลาย 5' ของ amplicon (เพราะ primer เป็นจุดเริ่มต้นการ amplify) จึงตัดได้เป็นชิ้นเล็ก (ใกล้ primer) + ชิ้นใหญ่ (ส่วนที่เหลือ)",
+      "en": "The engineered site lies near the 5' end of the amplicon (right where the mismatched primer anneals), so the cut produces one very short fragment plus one long fragment — by design."
+    }
+  }
+]

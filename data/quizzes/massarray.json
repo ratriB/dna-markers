@@ -1,0 +1,52 @@
+[
+  {
+    "id": "q1",
+    "prompt": { "th": "MassArray ใช้หลักการอ่าน SNP ด้วยอะไร?", "en": "What is the readout principle of MassArray?" },
+    "choices": [
+      { "th": "Fluorescence color",                            "en": "Fluorescence color" },
+      { "th": "Size of PCR product บน gel",                    "en": "Size of PCR product on a gel" },
+      { "th": "Mass-to-charge ratio (m/z) ของ extension product ที่วัดด้วย MALDI-TOF mass spectrometer",
+        "en": "Mass-to-charge ratio (m/z) of extension products measured by MALDI-TOF mass spectrometry" },
+      { "th": "Restriction site บน DNA",                      "en": "Restriction site presence/absence" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "MassArray ทำ single-base extension (SBE) บน primer ที่ปลาย 3' อยู่ติดกับ SNP · เบสที่เติมแต่ละชนิดมีมวลต่างกันเล็กน้อย · MALDI-TOF วัด m/z ได้แม่นยำ → แยก allele ออกจากกัน",
+      "en": "MassArray performs single-base extension on a primer whose 3' end abuts the SNP. Each added base has a slightly different mass, and MALDI-TOF measures m/z precisely enough to distinguish alleles."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": { "th": "ใน mass spectrum ของ sample MassArray ถ้าเห็น 2 peaks ที่ m/z 5023 และ 5047 หมายถึง genotype อะไร?",
+                "en": "If a MassArray sample shows two peaks at m/z 5023 and 5047, what genotype is that?" },
+    "choices": [
+      { "th": "Homozygous AA",  "en": "Homozygous AA" },
+      { "th": "Homozygous aa",  "en": "Homozygous aa" },
+      { "th": "Heterozygous Aa — มีทั้ง 2 alleles → extension product 2 มวล",
+        "en": "Heterozygous Aa — both alleles present → extension products at both masses" },
+      { "th": "NTC ที่มีสัญญาณ noise", "en": "NTC with noise signal" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Heterozygote มี template DNA ทั้ง 2 allele → primer ขยาย product 2 ชนิดมวลต่างกัน → MALDI เห็น 2 peaks · 1 peak = homozygote (AA หรือ aa) · ไม่มี peak = NTC หรือปฏิกิริยา fail",
+      "en": "A heterozygote (Aa) carries both alleles, so extension yields two products of different masses → MALDI shows two peaks. One peak = homozygote (AA or aa); no peak = NTC or failed reaction."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": { "th": "ข้อจำกัดสำคัญของ MassArray คืออะไร?",
+                "en": "What is the main limitation of MassArray?" },
+    "choices": [
+      { "th": "ความแม่นยำต่ำ",                    "en": "Low accuracy" },
+      { "th": "ใช้ DNA หลาย µg ต่อ sample",      "en": "Requires several µg of DNA per sample" },
+      { "th": "ต้นทุนเครื่อง MALDI-TOF สูง · throughput ปานกลางเทียบกับ NGS · ต้องออกแบบ extension primer สำหรับทุก SNP",
+        "en": "Expensive MALDI-TOF instrument · moderate throughput compared to NGS · extension primer must be designed for every SNP" },
+      { "th": "อ่านได้เฉพาะ InDel ไม่ใช่ SNP",    "en": "Only reads InDels, not SNPs" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "MALDI-TOF เป็นเครื่องราคาสูง · ใช้กับ SNP จำนวนระดับ 100–1000 ต่อ run (ดีกว่า KASP ในแง่ multiplex แต่น้อยกว่า NGS-based genotyping) · ปัจจุบันถูกแทนที่ด้วย NGS arrays สำหรับ ultra-high throughput · แต่ยังนิยมในงาน clinical ที่ต้องการความแม่นยำสูง",
+      "en": "MALDI-TOF instruments are expensive. Throughput is 100–1000 SNPs per run — better multiplexing than KASP but lower throughput than NGS arrays. Largely supplanted by NGS for ultra-high throughput, yet still popular in clinical genotyping where peak accuracy matters."
+    }
+  }
+]

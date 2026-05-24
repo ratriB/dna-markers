@@ -1,0 +1,31 @@
+{
+  "snp": "[A/a]",
+  "samples": [
+    {"id": "S01", "fam": 0.92, "hex": 0.12, "genotype": "AA"},
+    {"id": "S02", "fam": 0.88, "hex": 0.09, "genotype": "AA"},
+    {"id": "S03", "fam": 0.95, "hex": 0.14, "genotype": "AA"},
+    {"id": "S04", "fam": 0.89, "hex": 0.11, "genotype": "AA"},
+    {"id": "S05", "fam": 0.93, "hex": 0.08, "genotype": "AA"},
+    {"id": "S06", "fam": 0.86, "hex": 0.13, "genotype": "AA"},
+    {"id": "S07", "fam": 0.91, "hex": 0.10, "genotype": "AA"},
+    {"id": "S08", "fam": 0.90, "hex": 0.15, "genotype": "AA"},
+    {"id": "S09", "fam": 0.12, "hex": 0.93, "genotype": "BB"},
+    {"id": "S10", "fam": 0.10, "hex": 0.89, "genotype": "BB"},
+    {"id": "S11", "fam": 0.13, "hex": 0.91, "genotype": "BB"},
+    {"id": "S12", "fam": 0.08, "hex": 0.95, "genotype": "BB"},
+    {"id": "S13", "fam": 0.14, "hex": 0.87, "genotype": "BB"},
+    {"id": "S14", "fam": 0.11, "hex": 0.92, "genotype": "BB"},
+    {"id": "S15", "fam": 0.09, "hex": 0.90, "genotype": "BB"},
+    {"id": "S16", "fam": 0.12, "hex": 0.88, "genotype": "BB"},
+    {"id": "S17", "fam": 0.52, "hex": 0.55, "genotype": "AB"},
+    {"id": "S18", "fam": 0.48, "hex": 0.53, "genotype": "AB"},
+    {"id": "S19", "fam": 0.55, "hex": 0.49, "genotype": "AB"},
+    {"id": "S20", "fam": 0.51, "hex": 0.51, "genotype": "AB"},
+    {"id": "S21", "fam": 0.47, "hex": 0.56, "genotype": "AB"},
+    {"id": "S22", "fam": 0.53, "hex": 0.50, "genotype": "AB"},
+    {"id": "S23", "fam": 0.49, "hex": 0.54, "genotype": "AB"},
+    {"id": "S24", "fam": 0.54, "hex": 0.48, "genotype": "AB"},
+    {"id": "NTC1","fam": 0.05, "hex": 0.06, "genotype": "NTC"},
+    {"id": "NTC2","fam": 0.07, "hex": 0.04, "genotype": "NTC"}
+  ]
+}

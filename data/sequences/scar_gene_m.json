@@ -1,0 +1,49 @@
+{
+  "locus": "Gene M — disease resistance (simulated)",
+  "ampliconLength": {
+    "R": 480,
+    "s": 430
+  },
+  "primers": {
+    "forward":      { "start": 0,   "end": 20 },
+    "reverseR":     { "start": 460, "end": 480 },
+    "reverseS":     { "start": 410, "end": 430 }
+  },
+  "insertion": {
+    "start": 215,
+    "end":   265,
+    "length": 50
+  },
+  "individuals": [
+    {
+      "id": "Ind-1",
+      "genotype": "RR",
+      "alleles": ["R", "R"],
+      "label": { "th": "ตัวอย่าง 1 (RR)", "en": "Ind-1 (RR)" },
+      "description": {
+        "th": "Homozygote RR — homologous chromosome ทั้ง 2 มี allele R (มี insertion) → เห็น band 480 bp เพียง band เดียวบน gel",
+        "en": "Homozygote RR — both homologous chromosomes carry allele R (with insertion) → single 480 bp band on gel."
+      }
+    },
+    {
+      "id": "Ind-2",
+      "genotype": "ss",
+      "alleles": ["s", "s"],
+      "label": { "th": "ตัวอย่าง 2 (ss)", "en": "Ind-2 (ss)" },
+      "description": {
+        "th": "Homozygote ss — homologous chromosome ทั้ง 2 ขาด insertion → เห็น band 430 bp เพียง band เดียว",
+        "en": "Homozygote ss — both homologous chromosomes lack the insertion → single 430 bp band."
+      }
+    },
+    {
+      "id": "Ind-3",
+      "genotype": "Rs",
+      "alleles": ["R", "s"],
+      "label": { "th": "ตัวอย่าง 3 (Rs)", "en": "Ind-3 (Rs)" },
+      "description": {
+        "th": "Heterozygote — homologous chromosome ตัวหนึ่งมี allele R อีกตัวเป็น s → เห็น band 2 ขนาดพร้อมกัน (480 + 430) ← codominant",
+        "en": "Heterozygote — one homologous chromosome carries R, the other s → both bands visible (480 + 430 bp) ← codominant."
+      }
+    }
+  ]
+}

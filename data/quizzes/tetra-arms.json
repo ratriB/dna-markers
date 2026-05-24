@@ -1,0 +1,58 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "หลักการสำคัญที่ทำให้ ARMS primer ขยายเฉพาะ allele เป้าหมายคืออะไร?",
+      "en": "What is the key principle that lets an ARMS primer amplify only its target allele?"
+    },
+    "choices": [
+      { "th": "Annealing temperature ที่สูงมาก", "en": "A very high annealing temperature" },
+      { "th": "3' end ของ primer ต้อง match กับเบสของ allele นั้นพอดี — mismatch ปลาย 3' ทำให้ Taq ไม่ extend",
+        "en": "The primer's 3' end must perfectly match the target allele — a 3' mismatch blocks Taq extension" },
+      { "th": "Primer ต้องมีความยาวอย่างน้อย 30 nt", "en": "The primer must be at least 30 nt long" },
+      { "th": "ต้องใช้ enzyme พิเศษนอกเหนือจาก Taq", "en": "A special enzyme other than Taq is required" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Taq polymerase ขาดความสามารถ proofreading 3'→5' จึง extend ได้ดีเฉพาะเมื่อปลาย 3' จับคู่ตรงเป๊ะกับ template — เป็นหัวใจของเทคนิค allele-specific PCR ทุกประเภทรวมถึง KASP",
+      "en": "Taq polymerase lacks 3'→5' proofreading, so extension is highly sensitive to a 3'-end mismatch. This is the basis of all allele-specific PCR methods, including ARMS and KASP."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "บน gel ของ Tetra-ARMS PCR — Ind-3 (heterozygote AT) จะเห็น band ขนาดใดบ้าง?",
+      "en": "On a Tetra-ARMS gel, what bands does Ind-3 (heterozygote AT) show?"
+    },
+    "choices": [
+      { "th": "412 bp อย่างเดียว", "en": "412 bp only" },
+      { "th": "412 + 248 bp", "en": "412 + 248 bp" },
+      { "th": "412 + 218 bp", "en": "412 + 218 bp" },
+      { "th": "412 + 248 + 218 bp — ทั้ง 3 band", "en": "412 + 248 + 218 bp — all three" }
+    ],
+    "answer": 3,
+    "explain": {
+      "th": "Heterozygote มีทั้ง allele A และ T → ขยายได้ทั้ง inner-A band (248) และ inner-T band (218) บวกกับ control band (412) ที่เห็นเสมอ",
+      "en": "A heterozygote carries both A and T alleles, so both inner-A (248) and inner-T (218) products amplify, plus the always-present control band (412)."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ทำไม Tetra-ARMS จึงนิยมใช้กว่า ARMS ธรรมดา (single PCR ต่อ allele)?",
+      "en": "Why is Tetra-ARMS often preferred over single-tube ARMS (one PCR per allele)?"
+    },
+    "choices": [
+      { "th": "ใช้ primer น้อยกว่า", "en": "It uses fewer primers" },
+      { "th": "ปฏิกิริยาเดียวจบ ได้ control band เป็น internal control + แยก genotype ได้ทันที",
+        "en": "Single reaction with a built-in control band, and the genotype is read directly from band pattern" },
+      { "th": "ไม่ต้องใช้ Taq polymerase", "en": "It does not require Taq polymerase" },
+      { "th": "ตรวจ SNP ได้พร้อมกันหลายตำแหน่ง", "en": "It can detect many SNPs in parallel" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "Single reaction = ลดเวลา/ค่าใช้จ่าย; control band ช่วยยืนยันว่า PCR ทำงานได้แม้ allele-specific bands จะหายไป (ไม่เกิด false-negative); และ band pattern อ่าน genotype ได้ทันทีโดยไม่ต้องเปรียบเทียบหลายหลอด",
+      "en": "A single reaction saves time and cost; the control band confirms the PCR worked even when an allele-specific band is absent (guards against false negatives); and the band pattern directly reveals the genotype with no inter-tube comparison."
+    }
+  }
+]

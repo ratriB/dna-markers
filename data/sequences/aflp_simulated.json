@@ -1,0 +1,24 @@
+{
+  "enzymes": { "rare": "EcoRI", "frequent": "MseI" },
+  "selectivePrimer": "EcoRI+AAC / MseI+CAT",
+  "samples": [
+    {
+      "id": "Sample 1",
+      "label": { "th": "ตัวอย่าง 1", "en": "Sample 1" },
+      "bands": [60, 95, 140, 185, 230, 280, 340, 410, 470, 540, 620, 700, 820, 950, 1100],
+      "polymorphic": [340, 470]
+    },
+    {
+      "id": "Sample 2",
+      "label": { "th": "ตัวอย่าง 2", "en": "Sample 2" },
+      "bands": [60, 95, 140, 185, 230, 280, 310, 410, 470, 540, 620, 700, 820, 950, 1100],
+      "polymorphic": [310, 470]
+    },
+    {
+      "id": "Sample 3",
+      "label": { "th": "ตัวอย่าง 3", "en": "Sample 3" },
+      "bands": [60, 95, 140, 185, 230, 280, 340, 410, 510, 540, 620, 700, 820, 950, 1100],
+      "polymorphic": [340, 510]
+    }
+  ]
+}

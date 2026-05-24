@@ -1,0 +1,39 @@
+{
+  "locus": "Gene Y (simulated, PCR amplicon)",
+  "ampliconLength": 480,
+  "snpPos": 250,
+  "variableSite": {
+    "alleleA_motif": "GAATTC",
+    "allelea_motif": "GAACTC"
+  },
+  "primers": {
+    "forward": { "start": 0,   "end": 20,  "label": "F" },
+    "reverse": { "start": 460, "end": 480, "label": "R" }
+  },
+  "individuals": [
+    {
+      "id": "Ind-1", "genotype": "AA", "alleles": ["A", "A"],
+      "label": { "th": "ตัวอย่าง 1 (AA)", "en": "Ind-1 (AA)" },
+      "description": {
+        "th": "Homozygote AA — amplicon ทั้งสอง homologous chromosome มี EcoRI site → เห็น 2 band หลังตัด",
+        "en": "Homozygote AA — both amplicons carry the EcoRI site → 2 bands after digest"
+      }
+    },
+    {
+      "id": "Ind-2", "genotype": "aa", "alleles": ["a", "a"],
+      "label": { "th": "ตัวอย่าง 2 (aa)", "en": "Ind-2 (aa)" },
+      "description": {
+        "th": "Homozygote aa — SNP ทำลาย site ทั้งสอง homologous chromosome → เห็น 1 band (full-length)",
+        "en": "Homozygote aa — SNP destroys the site on both homologous chromosomes → single uncut band"
+      }
+    },
+    {
+      "id": "Ind-3", "genotype": "Aa", "alleles": ["A", "a"],
+      "label": { "th": "ตัวอย่าง 3 (Aa)", "en": "Ind-3 (Aa)" },
+      "description": {
+        "th": "Heterozygote — เห็น 3 band (uncut allele a + 2 ชิ้นจาก allele A) → codominant",
+        "en": "Heterozygote — 3 bands visible (uncut from allele a + 2 cut fragments from allele A) → codominant"
+      }
+    }
+  ]
+}

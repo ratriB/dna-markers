@@ -1,0 +1,60 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "CAPs ต่างจาก RFLP อย่างไรสำคัญที่สุด?",
+      "en": "What is the most important difference between CAPs and RFLP?"
+    },
+    "choices": [
+      { "th": "CAPs ใช้ enzyme คนละชนิด", "en": "CAPs uses a different class of enzyme" },
+      { "th": "CAPs เริ่มด้วย PCR amplify เฉพาะ locus จึงไม่ต้องทำ Southern blot",
+        "en": "CAPs first amplifies only the target locus by PCR, so no Southern blot is needed" },
+      { "th": "CAPs เป็น dominant marker ไม่เหมือน RFLP",
+        "en": "CAPs is a dominant marker while RFLP is codominant" },
+      { "th": "CAPs ต้องการ DNA ปริมาณมากกว่า RFLP",
+        "en": "CAPs requires more DNA than RFLP" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "PCR ทำให้ amplicon มีแต่ locus เป้าหมาย เมื่อตัดด้วย enzyme แล้วเห็น band ของ locus นั้นโดยตรงบน stained gel ไม่ต้องอาศัย probe",
+      "en": "PCR isolates the target locus, so digesting the amplicon produces locus-specific bands directly visible on a stained gel — no probe required."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "ในชุดข้อมูล (EcoRI, amplicon 480 bp, SNP ที่ตำแหน่ง 250) — Ind-3 (Aa heterozygote) จะเห็น band ขนาดเท่าใดบ้างบน gel?",
+      "en": "Given the dataset (EcoRI, 480 bp amplicon, SNP at position 250), what bands does Ind-3 (Aa heterozygote) show on the gel?"
+    },
+    "choices": [
+      { "th": "480 bp อย่างเดียว", "en": "480 bp only" },
+      { "th": "248 + 232 bp อย่างเดียว", "en": "248 + 232 bp only" },
+      { "th": "480 + 248 + 232 bp ทั้งสาม band", "en": "480 + 248 + 232 bp — all three" },
+      { "th": "ไม่มี band เลย", "en": "No bands at all" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Heterozygote มี homologous chromosome ตัวหนึ่ง cut ได้ (→ 248 + 232) อีกตัวไม่ถูกตัด (→ 480) จึงเห็นทั้ง 3 band พร้อมกัน",
+      "en": "One homologous chromosome cuts (→ 248 + 232 bp), the other does not (→ 480 bp). All three bands appear together — codominance in action."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ข้อจำกัดสำคัญของ CAPs คืออะไร?",
+      "en": "What is the main limitation of CAPs?"
+    },
+    "choices": [
+      { "th": "ต้องใช้เครื่อง real-time PCR", "en": "Requires a real-time PCR machine" },
+      { "th": "SNP ต้องอยู่ใน recognition site ของ enzyme ที่มี — ใช้ได้กับ SNP ประมาณ 1 ใน 4 เท่านั้น",
+        "en": "The SNP must lie inside an enzyme's recognition site — only about 1 in 4 SNPs qualify" },
+      { "th": "เป็น dominant marker", "en": "It is a dominant marker" },
+      { "th": "ใช้ DNA หลายไมโครกรัม", "en": "Needs several micrograms of DNA" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "SNP ส่วนใหญ่ไม่ได้อยู่ใน restriction site → ใช้ CAPs ตรง ๆ ไม่ได้ จึงต้องใช้ dCAPs (ออกแบบ primer mismatch เพื่อสร้าง site) หรือเปลี่ยนไป ARMS-based markers",
+      "en": "Most SNPs do not happen to lie inside a restriction-enzyme recognition site. For those, dCAPs (which engineers a site via a mismatched primer) or ARMS-based methods are used instead."
+    }
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "snp": "[A/C]",
+  "alleleA_mz": 5023,
+  "alleleB_mz": 5047,
+  "spectrumStart": 4980,
+  "spectrumEnd":   5090,
+  "individuals": [
+    {
+      "id": "Ind-1",
+      "genotype": "AA",
+      "alleles": ["A", "A"],
+      "label": { "th": "ตัวอย่าง 1 (AA)", "en": "Ind-1 (AA)" },
+      "peaks": [{"mz": 5023, "intensity": 0.95}],
+      "description": {
+        "th": "Homozygote AA — extension product มีเฉพาะ allele A → เห็น peak เดียวที่ m/z 5023",
+        "en": "Homozygote AA — extension product only from allele A → single peak at m/z 5023"
+      }
+    },
+    {
+      "id": "Ind-2",
+      "genotype": "BB",
+      "alleles": ["B", "B"],
+      "label": { "th": "ตัวอย่าง 2 (aa)", "en": "Ind-2 (aa)" },
+      "peaks": [{"mz": 5047, "intensity": 0.93}],
+      "description": {
+        "th": "Homozygote aa — extension product มีเฉพาะ allele a → เห็น peak เดียวที่ m/z 5047",
+        "en": "Homozygote aa — extension product only from allele a → single peak at m/z 5047"
+      }
+    },
+    {
+      "id": "Ind-3",
+      "genotype": "AB",
+      "alleles": ["A", "B"],
+      "label": { "th": "ตัวอย่าง 3 (Aa)", "en": "Ind-3 (Aa)" },
+      "peaks": [{"mz": 5023, "intensity": 0.52}, {"mz": 5047, "intensity": 0.50}],
+      "description": {
+        "th": "Heterozygote Aa — มีทั้ง allele A และ a → เห็น 2 peaks ที่ความสูงใกล้เคียงกัน → codominant อ่านได้ทันที",
+        "en": "Heterozygote Aa — both alleles present → two peaks of similar height → codominant, directly readable."
+      }
+    }
+  ]
+}

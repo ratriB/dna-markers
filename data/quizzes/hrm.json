@@ -1,0 +1,52 @@
+[
+  {
+    "id": "q1",
+    "prompt": { "th": "HRM ตรวจจับความแตกต่างของ DNA จากอะไร?", "en": "How does HRM detect DNA differences?" },
+    "choices": [
+      { "th": "ตัดด้วย restriction enzyme",            "en": "Restriction digestion" },
+      { "th": "อ่านลำดับเบสทุกตัวอย่าง",                "en": "Sequencing every sample" },
+      { "th": "วัด fluorescence ของ saturating dye ที่จับ DNA สายคู่ขณะค่อย ๆ เพิ่มอุณหภูมิ → ได้ melting curve",
+        "en": "Measures fluorescence of a saturating dye on double-stranded DNA while slowly ramping temperature → producing a melting curve" },
+      { "th": "วัดน้ำหนัก DNA ด้วย mass spec",         "en": "Mass spectrometry on the DNA" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Saturating dye (LCGreen, EvaGreen) จับ DNA สายคู่และเรืองแสง · เมื่อ DNA หลอมเหลว สายแยก dye หลุด fluorescence ลดลง · จุดเปลี่ยน (inflection point) คือ Tm — แต่ละ allele มี Tm ต่างกันแม้แค่ SNP เดียว",
+      "en": "Saturating dyes (LCGreen, EvaGreen) bind dsDNA and fluoresce. As DNA melts, the strands separate, the dye is released, and fluorescence drops. The inflection point is Tm — which differs even for single SNPs between alleles."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": { "th": "ทำไม heterozygote ใน HRM มี melting curve แตกต่างจาก homozygote ทั้ง 2 แบบ?",
+                "en": "Why does a heterozygote's HRM curve differ from both homozygote curves?" },
+    "choices": [
+      { "th": "เพราะ heterozygote มี DNA มากกว่า", "en": "Because heterozygotes have more DNA" },
+      { "th": "เพราะ heterozygote มีทั้ง homoduplex (AA, BB) และ heteroduplex (A/B) ในหลอด — heteroduplex มี mismatch จึงหลอมเหลวที่ Tm ต่ำกว่า",
+        "en": "Because heterozygotes contain homoduplex (AA, BB) AND heteroduplex (A/B) products — heteroduplexes carry a mismatch and melt at lower Tm" },
+      { "th": "เพราะ dye จับ heterozygote แน่นกว่า", "en": "The dye binds heterozygote DNA more tightly" },
+      { "th": "เพราะ PCR ของ heterozygote มีประสิทธิภาพต่ำกว่า", "en": "Heterozygote PCR is less efficient" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "หลัง PCR ใน heterozygote เมื่อ DNA สาย A จับสาย B จะได้ heteroduplex ที่มี mismatch 1 ตำแหน่ง → ลด Tm ลง ~1°C — curve จึงมี 2 จุดเปลี่ยน (homoduplex + heteroduplex) ทำให้รูปร่างต่างจาก homozygote ที่มี duplex แบบเดียว",
+      "en": "After PCR, heterozygote samples form heteroduplex molecules (A strand + B strand with one mismatch) that melt ~1 °C lower than homoduplexes. The combined curve shows two inflection points — uniquely shaped, distinct from either homozygote."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": { "th": "จุดเด่นของ HRM เมื่อเทียบกับ CAPs/dCAPs คืออะไร?",
+                "en": "What advantage does HRM offer over CAPs/dCAPs?" },
+    "choices": [
+      { "th": "ราคาถูกกว่าและไม่ต้องใช้เครื่องเฉพาะ", "en": "Cheaper and doesn't need special equipment" },
+      { "th": "<strong>ไม่ต้องตัดด้วย enzyme · ไม่ต้องรัน gel</strong> — ทุกอย่างจบในหลอดเดียวบน real-time PCR machine — closed-tube format ลด contamination",
+        "en": "<strong>No enzyme cut · no gel run</strong> — everything happens in a single tube on a real-time PCR machine — closed-tube format minimizes contamination" },
+      { "th": "ตรวจ SNP ได้แม่นยำกว่า sequencing",    "en": "More accurate than sequencing for SNPs" },
+      { "th": "ใช้ DNA น้อยกว่า PCR ทั่วไป",          "en": "Uses less DNA than ordinary PCR" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "HRM ทำใน real-time PCR เครื่องเดียวกัน ตั้งแต่ amplification ถึงอ่านผล — ไม่ต้องเปิดหลอด ไม่ต้องตัด ไม่ต้องรัน gel · เร็วและลดความเสี่ยงปนเปื้อน — แต่ <em>ต้องการเครื่อง real-time PCR ที่มี HRM module</em>",
+      "en": "HRM runs entirely inside a real-time PCR machine — amplification through analysis without ever opening the tube. No digestion, no gel. Fast and contamination-safe — but does require a real-time PCR instrument with an HRM module."
+    }
+  }
+]

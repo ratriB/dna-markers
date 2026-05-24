@@ -1,0 +1,43 @@
+{
+  "locus": "Gene Z (simulated, dCAPs amplicon)",
+  "ampliconLength": 220,
+  "enzyme": "PstI",
+  "snpPos": 22,
+  "engineeredPrimer": {
+    "native3":    "CCTGTA",
+    "mismatched3": "CCTGCA",
+    "note": {
+      "th": "เปลี่ยน T → C ที่ตำแหน่ง 2 จากปลาย 3' ของ primer เพื่อร่วมกับ SNP สร้าง PstI site (CTGCAG)",
+      "en": "T → C swap two bases from the 3' end of the primer, so the primer + SNP allele G completes the PstI recognition sequence (CTGCAG)."
+    }
+  },
+  "individuals": [
+    {
+      "id": "Ind-1", "genotype": "GG", "alleles": ["G", "G"],
+      "fragments": [22, 198],
+      "label": { "th": "ตัวอย่าง 1 (GG)", "en": "Ind-1 (GG)" },
+      "description": {
+        "th": "Homozygote G — primer + allele G สร้าง PstI site ทั้งสอง homologous chromosome → ตัดได้ → 22 + 198 bp",
+        "en": "Homozygote G — primer + allele G completes the PstI site on both homologous chromosomes → cut → 22 + 198 bp"
+      }
+    },
+    {
+      "id": "Ind-2", "genotype": "AA", "alleles": ["A", "A"],
+      "fragments": [220],
+      "label": { "th": "ตัวอย่าง 2 (AA)", "en": "Ind-2 (AA)" },
+      "description": {
+        "th": "Homozygote A — site ไม่ครบใน amplicon ทั้งคู่ → ไม่ถูกตัด → 220 bp",
+        "en": "Homozygote A — site not completed on either homologous chromosome → uncut → 220 bp"
+      }
+    },
+    {
+      "id": "Ind-3", "genotype": "GA", "alleles": ["G", "A"],
+      "fragments": [220, 198, 22],
+      "label": { "th": "ตัวอย่าง 3 (GA)", "en": "Ind-3 (GA)" },
+      "description": {
+        "th": "Heterozygote — เห็น 3 band (uncut 220 + ชิ้นที่ตัดได้ 198 + 22 จาก allele G) → codominant",
+        "en": "Heterozygote — 3 bands: uncut 220 bp from allele A + the 198 + 22 bp cut fragments from allele G → codominant"
+      }
+    }
+  ]
+}

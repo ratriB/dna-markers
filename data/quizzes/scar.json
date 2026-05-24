@@ -1,0 +1,61 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "SCAR พัฒนามาจากเทคนิคใด?",
+      "en": "Which technique was SCAR developed from?"
+    },
+    "choices": [
+      { "th": "Sanger sequencing โดยตรง",          "en": "Sanger sequencing directly" },
+      { "th": "RAPD หรือ AFLP (โดยนำ band ที่สนใจมา sequencing แล้วออกแบบ primer ใหม่)",
+        "en": "RAPD or AFLP — by sequencing a band of interest and designing new specific primers" },
+      { "th": "qPCR + melting curve",              "en": "qPCR + melting curve" },
+      { "th": "Restriction digest ของจีโนมทั้งก้อน","en": "Whole-genome restriction digest" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "SCAR คือการ \"convert\" marker ที่ไม่จำเพาะ (RAPD/AFLP — ทำซ้ำได้ไม่ดี + dominant) ให้กลายเป็น marker เฉพาะที่ทำซ้ำได้ดี โดยอ่านลำดับเบสของ band ที่สนใจแล้วออกแบบ primer ใหม่",
+      "en": "SCAR \"converts\" a non-specific marker (RAPD/AFLP — poorly reproducible and dominant) into a specific, reproducible marker by sequencing the band of interest and designing new locus-specific primers."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "ในชุดข้อมูล (allele R = 480 bp มี insertion 50 bp, allele s = 430 bp) Ind-3 (Rs heterozygote) จะเห็น band ขนาดใดบ้าง?",
+      "en": "In the dataset (allele R = 480 bp with a 50-bp insertion, allele s = 430 bp), what bands does Ind-3 (Rs heterozygote) show?"
+    },
+    "choices": [
+      { "th": "480 bp อย่างเดียว",                  "en": "480 bp only" },
+      { "th": "430 bp อย่างเดียว",                  "en": "430 bp only" },
+      { "th": "480 + 430 bp (2 band)",              "en": "480 + 430 bp (2 bands)" },
+      { "th": "50 bp อย่างเดียว (insertion)",        "en": "50 bp only (the insertion)" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "Heterozygote — homologous chromosome ตัวหนึ่งให้ amplicon 480 bp (มี insertion) อีกตัวให้ 430 bp (ไม่มี) → เห็น 2 band พร้อมกัน นี่คือ codominant pattern",
+      "en": "Heterozygote — one homologous chromosome yields a 480 bp amplicon (with insertion), the other 430 bp (without). Both bands appear together — the codominant pattern."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ข้อใดเป็นข้อได้เปรียบสำคัญของ SCAR เมื่อเทียบกับ RAPD/AFLP?",
+      "en": "What is the key advantage of SCAR compared to RAPD/AFLP?"
+    },
+    "choices": [
+      { "th": "ใช้ enzyme ราคาถูกกว่า",
+        "en": "Uses cheaper enzymes" },
+      { "th": "ทำซ้ำได้ดี (reproducible) เพราะใช้ primer จำเพาะที่ออกแบบจากลำดับเบสจริง — ปฏิกิริยาเดียวจบ ไม่ต้อง low-stringency PCR หรือ adapter ligation",
+        "en": "Reproducibility — uses sequence-specific primers designed from the actual sequence; single PCR reaction, no low-stringency PCR or adapter ligation" },
+      { "th": "ตรวจ SNP ได้โดยตรง",
+        "en": "Directly detects SNPs" },
+      { "th": "ใช้ DNA น้อยกว่า PCR ทั่วไป",
+        "en": "Uses less DNA than ordinary PCR" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RAPD ไวมากต่อสภาวะ PCR (low annealing temp) ทำให้ pattern เปลี่ยนไปตามห้องแล็บ → SCAR แก้ปัญหาโดยใช้ primer เฉพาะที่จับ DNA แน่นและทำซ้ำได้ดี — เป็นเครื่องหมายที่นำไปใช้ในงาน MAS ได้จริง",
+      "en": "RAPD is highly sensitive to PCR conditions (low annealing temperature) so band patterns shift between labs. SCAR solves this by using specific primers that bind tightly and reproducibly — turning the original band into a usable MAS marker."
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "q1",
+    "prompt": { "th": "KASP ใช้ primer กี่ตัวต่อ SNP?", "en": "How many primers does KASP use per SNP?" },
+    "choices": [
+      { "th": "1 ตัว", "en": "1" },
+      { "th": "2 ตัว (forward + reverse)", "en": "2 (forward + reverse)" },
+      { "th": "3 ตัว — forward 2 ตัวจำเพาะกับแต่ละ allele (มี FAM/HEX tail) + reverse 1 ตัวที่ใช้ร่วม",
+        "en": "3 — two allele-specific forward primers (with FAM/HEX tails) + one common reverse primer" },
+      { "th": "4 ตัวเหมือน Tetra-ARMS", "en": "4, like Tetra-ARMS" }
+    ],
+    "answer": 2,
+    "explain": {
+      "th": "KASP ใช้ 3 primer · forward 2 ตัวแยก allele ผ่าน 3' specificity (เหมือน ARMS) · แต่ละ tail แตกต่างกันจะไป trigger fluorophore (FAM หรือ HEX) ในระบบ FRET cassette ที่อยู่ใน master mix",
+      "en": "KASP uses 3 primers — two forward primers discriminate alleles by 3' specificity (ARMS-style); their tails trigger different fluorophores (FAM or HEX) on FRET cassettes pre-mixed in the master mix."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": { "th": "ใน scatter plot ของ KASP จุดที่อยู่ใน cluster มุมขวาล่าง (FAM สูง, HEX ต่ำ) คือ genotype ใด?",
+                "en": "In a KASP scatter plot, what genotype is in the bottom-right cluster (high FAM, low HEX)?" },
+    "choices": [
+      { "th": "Homozygous aa", "en": "Homozygous aa" },
+      { "th": "Homozygous AA", "en": "Homozygous AA" },
+      { "th": "Heterozygous Aa", "en": "Heterozygous Aa" },
+      { "th": "NTC", "en": "NTC" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "FAM tail ติดกับ allele-A primer · สัญญาณ FAM สูง = มีแต่ allele A → homozygous AA · aa จะอยู่ตรงกันข้าม (HEX สูง, FAM ต่ำ) · Aa อยู่ตรงกลางทแยง · NTC อยู่ใกล้ origin",
+      "en": "The FAM tail is on the allele-A primer — strong FAM signal means only allele A was amplified → homozygous AA. aa sits in the opposite corner (high HEX, low FAM); Aa lies on the diagonal middle; NTC near the origin."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": { "th": "ทำไม KASP เป็น marker ที่นิยมในอุตสาหกรรม seed/breeding ปัจจุบัน?",
+                "en": "Why is KASP today's marker of choice in commercial seed/breeding?" },
+    "choices": [
+      { "th": "ตรวจ SNP ทั่วจีโนมในครั้งเดียว",
+        "en": "Detects all genome-wide SNPs at once" },
+      { "th": "<strong>ราคาต่อ data point ต่ำมาก (~$0.10)</strong> · ทำใน 384-well + automation ได้ · อ่านผลตรงจาก fluorescence cluster ไม่ต้อง gel · scale ใหญ่ได้",
+        "en": "<strong>Extremely low cost per data point (~$0.10)</strong> · 384-well + automation ready · genotype read directly from fluorescence cluster, no gel · scales massively" },
+      { "th": "ไม่ต้องใช้ DNA template",
+        "en": "Doesn't need DNA template" },
+      { "th": "ใช้ enzyme ที่ราคาถูกที่สุด",
+        "en": "Uses the cheapest enzymes" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "KASP รวมข้อดี allele-specific PCR (ARMS) + fluorescence detection + automation → ต้นทุนต่ำที่สุดในกลุ่ม SNP genotyping ที่ใช้กับ MAS ขนาดใหญ่ · แต่ <em>ต้องออกแบบ primer ใหม่ทุก SNP</em>",
+      "en": "KASP combines allele-specific PCR (ARMS) + fluorescence detection + automation, giving the lowest per-genotype cost for industrial-scale MAS — though <em>new primers must be designed for every SNP</em>."
+    }
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "q1",
+    "prompt": {
+      "th": "RAPD ใช้ primer แบบใด?",
+      "en": "What kind of primer does RAPD use?"
+    },
+    "choices": [
+      { "th": "Primer คู่ที่จำเพาะกับ locus เป้าหมาย",
+        "en": "A specific primer pair targeting a known locus" },
+      { "th": "Primer สั้น (~10 nt) ลำดับสุ่ม เพียงตัวเดียวต่อปฏิกิริยา ทำที่ annealing temp ต่ำ",
+        "en": "A single short (~10 nt) random primer per reaction, run at low annealing temperature" },
+      { "th": "Primer 4 ตัวที่จำเพาะกับ allele แต่ละแบบ",
+        "en": "Four primers each specific to a different allele" },
+      { "th": "Primer ที่มี mismatch ใกล้ปลาย 3'",
+        "en": "A primer with a mismatch near its 3' end" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RAPD ใช้ primer สั้นเพียงตัวเดียว ลำดับสุ่ม + annealing temp ต่ำ ~36°C → primer จับได้หลายตำแหน่งทั่วจีโนม · เมื่อจับ 2 ตำแหน่งที่หันเข้าหากันภายใน ~3 kb จะ amplify ได้ band",
+      "en": "RAPD uses a single short random primer at a low annealing temperature (~36 °C) so it binds many sites across the genome. When two sites face each other within ~3 kb, that region amplifies into a band."
+    }
+  },
+  {
+    "id": "q2",
+    "prompt": {
+      "th": "Ind-1 (มี site ครบ) และ Ind-3 (heterozygous ที่ S2) ให้ band pattern เหมือนกันทุกประการ — ทำไม?",
+      "en": "Ind-1 (all sites present) and Ind-3 (heterozygous at S2) give identical band patterns — why?"
+    },
+    "choices": [
+      { "th": "เป็นการบังเอิญ",
+        "en": "Just a coincidence" },
+      { "th": "RAPD เป็น <strong>dominant marker</strong> — ถ้า homologous chromosome ตัวใดตัวหนึ่งยังคงมี primer binding site → band ก็ยังถูก amplify ได้ → ไม่สามารถแยก hetero ออกจาก homo dominant ได้",
+        "en": "RAPD is a <strong>dominant marker</strong> — if either homologous chromosome still has the primer binding site, the band still amplifies → heterozygotes cannot be distinguished from dominant homozygotes" },
+      { "th": "Ind-3 จริง ๆ แล้วเป็น homozygous ไม่ใช่ hetero",
+        "en": "Ind-3 is actually homozygous, not heterozygous" },
+      { "th": "PCR ใช้ enzyme ต่างชนิดกัน",
+        "en": "The PCR uses a different enzyme" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "นี่คือข้อจำกัดสำคัญของ RAPD: เห็นแค่ band มี/ไม่มี → ถ้ามี band หมายถึงอย่างน้อย 1 chromosome มี site (ไม่รู้ว่าอีก chromosome มีด้วยหรือไม่) → ใช้สำหรับ fingerprinting และเปรียบเทียบประชากรได้ แต่แยก zygosity ไม่ได้",
+      "en": "This is RAPD's defining limitation: only band-present vs band-absent is scored. A band's presence tells you that at least one chromosome has the site, but you can't tell if the other does too. Fine for fingerprinting and population comparison, but cannot read zygosity."
+    }
+  },
+  {
+    "id": "q3",
+    "prompt": {
+      "th": "ข้อใดเป็น<strong>ข้อจำกัดสำคัญ</strong>ของ RAPD ที่ทำให้นักวิจัยปัจจุบันมักนิยมใช้ SSR/SNP แทน?",
+      "en": "Which is RAPD's <strong>main limitation</strong> that pushes modern researchers toward SSR/SNP markers instead?"
+    },
+    "choices": [
+      { "th": "ใช้ enzyme หายาก",
+        "en": "Requires rare enzymes" },
+      { "th": "Reproducibility ต่ำ (sensitive ต่อ PCR conditions มาก) + เป็น dominant marker",
+        "en": "Poor reproducibility (very sensitive to PCR conditions) + dominant marker" },
+      { "th": "ใช้ DNA หลาย µg ต่อปฏิกิริยา",
+        "en": "Needs many µg of DNA per reaction" },
+      { "th": "อ่านผลได้เฉพาะใน real-time PCR",
+        "en": "Can only be read on a real-time PCR machine" }
+    ],
+    "answer": 1,
+    "explain": {
+      "th": "RAPD ไวต่อ annealing temperature, MgCl₂, polymerase brand → band pattern อาจต่างกันระหว่างห้องแล็บ + เป็น dominant marker — 2 ข้อนี้ทำให้ไม่เหมาะสำหรับ MAS หรือ marker registration ในปัจจุบัน · SSR (codominant + reproducible) และ SNP-based markers (KASP, HRM) มาแทนที่",
+      "en": "RAPD is sensitive to annealing temperature, MgCl₂, and polymerase brand → band patterns can shift between labs. Combined with its dominant nature, this makes RAPD unsuitable for MAS or marker registration today. SSRs (codominant + reproducible) and SNP-based assays (KASP, HRM) have largely replaced it."
+    }
+  }
+]
